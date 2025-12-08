@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:Wpf.XP.Controls">
+  <Style x:Key="BlankButton" TargetType="{x:Type Button}">
+    <Setter Property="Background" Value="#00FFFFFF" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Button}">
+          <Grid Background="{TemplateBinding Control.Background}">
+            <ContentPresenter />
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <Style x:Key="{x:Type local:WindowFrame}" TargetType="{x:Type local:WindowFrame}">
+    <Setter Property="Background" Value="#ECE9D8" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type local:WindowFrame}">
+          <Grid Name="MainGrid">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto" />
+              <RowDefinition Height="*" />
+              <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid Row="0">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <Image Name="TitleBarLeft" Grid.Column="0" Width="28" Height="30" RenderOptions.BitmapScalingMode="NearestNeighbor" SnapsToDevicePixels="True" Source="pack://application:,,,/Wpf.XP;component/Resources/Frame/TitleLeft.png" />
+              <Image Name="TitleBarMiddle" Grid.Column="1" Height="30" RenderOptions.BitmapScalingMode="NearestNeighbor" SnapsToDevicePixels="True" Source="pack://application:,,,/Wpf.XP;component/Resources/Frame/TitleMiddle.png" Stretch="Fill" />
+              <Image Name="TitleBarRight" Grid.Column="2" Width="35" Height="30" RenderOptions.BitmapScalingMode="NearestNeighbor" SnapsToDevicePixels="True" Source="pack://application:,,,/Wpf.XP;component/Resources/Frame/TitleRight.png" />
+            </Grid>
+            <Grid Row="0" Margin="7,6,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <Image Name="Icon" Width="16" Height="16" Margin="-1,-1,4,0" RenderOptions.BitmapScalingMode="HighQuality" SnapsToDevicePixels="True" Source="{TemplateBinding local:WindowFrame.Icon}" />
+              <TextBlock Name="Title" Grid.Column="1" Margin="0,3,0,0" FontFamily="Trebuchet MS" FontSize="14" FontWeight="Bold" Foreground="#FFFFFFFF" SnapsToDevicePixels="True" Text="{TemplateBinding local:WindowFrame.Title}" TextOptions.TextFormattingMode="Ideal" TextTrimming="CharacterEllipsis">
+                <UIElement.Effect>
+                  <DropShadowEffect BlurRadius="0" Direction="315" Opacity="1" ShadowDepth="1" Color="#0A1883" />
+                </UIElement.Effect>
+              </TextBlock>
+              <local:ImageButton x:Name="MinimizeButton" Grid.Column="2" Width="21" Height="21" Padding="0" Background="#00FFFFFF" BorderThickness="0" HoverImage="pack://application:,,,/Wpf.XP;component/Resources/Frame/MinimizeButtonHover.png" Image="pack://application:,,,/Wpf.XP;component/Resources/Frame/MinimizeButton.png" PressImage="pack://application:,,,/Wpf.XP;component/Resources/Frame/MinimizeButtonPressed.png" WindowChrome.IsHitTestVisibleInChrome="True" Style="{StaticResource BlankButton}">
+                <Image Grid.Column="0" RenderOptions.BitmapScalingMode="NearestNeighbor" SnapsToDevicePixels="True" />
+              </local:ImageButton>
+              <local:ImageButton x:Name="MaximizeButton" Grid.Column="3" Width="21" Height="21" Margin="2,0,0,0" Padding="0" Background="#00FFFFFF" BorderThickness="0" DisabledImage="pack://application:,,,/Wpf.XP;component/Resources/Frame/MaximizeButtonDisabled.png" HoverImage="pack://application:,,,/Wpf.XP;component/Resources/Frame/MaximizeButtonHover.png" Image="pack://application:,,,/Wpf.XP;component/Resources/Frame/MaximizeButton.png" PressImage="pack://application:,,,/Wpf.XP;component/Resources/Frame/MaximizeButtonPressed.png" WindowChrome.IsHitTestVisibleInChrome="True" Style="{StaticResource BlankButton}">
+                <Image Grid.Column="0" RenderOptions.BitmapScalingMode="NearestNeighbor" SnapsToDevicePixels="True" />
+              </local:ImageButton>
+              <local:ImageButton x:Name="RestoreButton" Grid.Column="4" Width="21" Height="21" Margin="2,0,0,0" Padding="0" Background="#00FFFFFF" BorderThickness="0" DisabledImage="pack://application:,,,/Wpf.XP;component/Resources/Frame/RestoreButtonDisabled.png" HoverImage="pack://application:,,,/Wpf.XP;component/Resources/Frame/RestoreButtonHover.png" Image="pack://application:,,,/Wpf.XP;component/Resources/Frame/RestoreButton.png" PressImage="pack://application:,,,/Wpf.XP;component/Resources/Frame/RestoreButtonPressed.png" Visibility="Collapsed" WindowChrome.IsHitTestVisibleInChrome="True" Style="{StaticResource BlankButton}">
+                <Image Grid.Column="0" RenderOptions.BitmapScalingMode="NearestNeighbor" SnapsToDevicePixels="True" />
+              </local:ImageButton>
+              <local:ImageButton x:Name="CloseButton" Grid.Column="5" Width="21" Height="21" Margin="2,0,6,0" Padding="0" Background="#00FFFFFF" BorderThickness="0" HoverImage="pack://application:,,,/Wpf.XP;component/Resources/Frame/CloseButtonHover.png" Image="pack://application:,,,/Wpf.XP;component/Resources/Frame/CloseButton.png" PressImage="pack://application:,,,/Wpf.XP;component/Resources/Frame/CloseButtonPressed.png" WindowChrome.IsHitTestVisibleInChrome="True" Style="{StaticResource BlankButton}">
+                <Image Grid.Column="0" RenderOptions.BitmapScalingMode="NearestNeighbor" SnapsToDevicePixels="True" />
+              </local:ImageButton>
+            </Grid>
+            <Grid Row="1">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <Image Name="SideLeft" Grid.Column="0" Width="4" RenderOptions.BitmapScalingMode="NearestNeighbor" SnapsToDevicePixels="True" Source="pack://application:,,,/Wpf.XP;component/Resources/Frame/SideLeft.png" Stretch="Fill" />
+              <Grid Column="1" Background="{TemplateBinding Control.Background}">
+                <ContentPresenter />
+              </Grid>
+              <Image Name="SideRight" Grid.Column="2" Width="4" RenderOptions.BitmapScalingMode="NearestNeighbor" SnapsToDevicePixels="True" Source="pack://application:,,,/Wpf.XP;component/Resources/Frame/SideRight.png" Stretch="Fill" />
+            </Grid>
+            <Grid Row="2">
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+              </Grid.ColumnDefinitions>
+              <Image Name="BottomLeft" Grid.Column="0" Width="5" Height="4" RenderOptions.BitmapScalingMode="NearestNeighbor" SnapsToDevicePixels="True" Source="pack://application:,,,/Wpf.XP;component/Resources/Frame/BottomLeft.png" />
+              <Image Name="BottomMiddle" Grid.Column="1" Height="4" RenderOptions.BitmapScalingMode="NearestNeighbor" SnapsToDevicePixels="True" Source="pack://application:,,,/Wpf.XP;component/Resources/Frame/BottomMiddle.png" Stretch="Fill" />
+              <Image Name="BottomRight" Grid.Column="2" Width="4" Height="4" RenderOptions.BitmapScalingMode="NearestNeighbor" SnapsToDevicePixels="True" Source="pack://application:,,,/Wpf.XP;component/Resources/Frame/BottomRight.png" />
+            </Grid>
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

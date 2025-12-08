@@ -1,0 +1,90 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>Wpf.XP</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWPF>True</UseWPF>
+    <TargetFramework>netcoreapp6.0-windows</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="resources\frame\minimizebuttoninactive.png" />
+    <None Remove="resources\frame\closebuttonpressed.png" />
+    <None Remove="resources\frame\maximizebuttondisabledinactive.png" />
+    <None Remove="resources\frame\restorebuttondisabledinactive.png" />
+    <None Remove="resources\frame\closebutton.png" />
+    <None Remove="resources\frame\siderightinactive.png" />
+    <None Remove="resources\frame\titleright.png" />
+    <None Remove="resources\frame\titlemiddleinactive.png" />
+    <None Remove="resources\frame\sideright.png" />
+    <None Remove="resources\frame\bottommiddleinactive.png" />
+    <None Remove="resources\frame\bottommiddle.png" />
+    <None Remove="resources\frame\sideleft.png" />
+    <None Remove="resources\frame\closebuttonhover.png" />
+    <None Remove="resources\frame\titleleft.png" />
+    <None Remove="resources\frame\minimizebuttonpressed.png" />
+    <None Remove="resources\frame\restorebuttoninactive.png" />
+    <None Remove="resources\frame\restorebutton.png" />
+    <None Remove="resources\frame\maximizebutton.png" />
+    <None Remove="resources\frame\titlerightinactive.png" />
+    <None Remove="resources\frame\maximizebuttondisabled.png" />
+    <None Remove="resources\frame\minimizebuttonhover.png" />
+    <None Remove="resources\frame\bottomleft.png" />
+    <None Remove="resources\frame\closebuttoninactive.png" />
+    <None Remove="resources\frame\bottomright.png" />
+    <None Remove="resources\frame\sideleftinactive.png" />
+    <None Remove="resources\frame\titlemiddle.png" />
+    <None Remove="resources\frame\maximizebuttonhover.png" />
+    <None Remove="resources\frame\maximizebuttonpressed.png" />
+    <None Remove="resources\frame\minimizebutton.png" />
+    <None Remove="resources\frame\restorebuttondisabled.png" />
+    <None Remove="resources\frame\restorebuttonpressed.png" />
+    <None Remove="resources\frame\maximizebuttoninactive.png" />
+    <None Remove="resources\frame\titleleftinactive.png" />
+    <None Remove="resources\frame\bottomleftinactive.png" />
+    <None Remove="resources\frame\restorebuttonhover.png" />
+    <None Remove="resources\frame\bottomrightinactive.png" />
+    <Resource Include="resources\frame\minimizebuttoninactive.png" LogicalName="resources/frame/minimizebuttoninactive.png" />
+    <Resource Include="resources\frame\closebuttonpressed.png" LogicalName="resources/frame/closebuttonpressed.png" />
+    <Resource Include="resources\frame\maximizebuttondisabledinactive.png" LogicalName="resources/frame/maximizebuttondisabledinactive.png" />
+    <Resource Include="resources\frame\restorebuttondisabledinactive.png" LogicalName="resources/frame/restorebuttondisabledinactive.png" />
+    <Resource Include="resources\frame\closebutton.png" LogicalName="resources/frame/closebutton.png" />
+    <Resource Include="resources\frame\siderightinactive.png" LogicalName="resources/frame/siderightinactive.png" />
+    <Resource Include="resources\frame\titleright.png" LogicalName="resources/frame/titleright.png" />
+    <Resource Include="resources\frame\titlemiddleinactive.png" LogicalName="resources/frame/titlemiddleinactive.png" />
+    <Resource Include="resources\frame\sideright.png" LogicalName="resources/frame/sideright.png" />
+    <Resource Include="resources\frame\bottommiddleinactive.png" LogicalName="resources/frame/bottommiddleinactive.png" />
+    <Resource Include="resources\frame\bottommiddle.png" LogicalName="resources/frame/bottommiddle.png" />
+    <Resource Include="resources\frame\sideleft.png" LogicalName="resources/frame/sideleft.png" />
+    <Resource Include="resources\frame\closebuttonhover.png" LogicalName="resources/frame/closebuttonhover.png" />
+    <Resource Include="resources\frame\titleleft.png" LogicalName="resources/frame/titleleft.png" />
+    <Resource Include="resources\frame\minimizebuttonpressed.png" LogicalName="resources/frame/minimizebuttonpressed.png" />
+    <Resource Include="resources\frame\restorebuttoninactive.png" LogicalName="resources/frame/restorebuttoninactive.png" />
+    <Resource Include="resources\frame\restorebutton.png" LogicalName="resources/frame/restorebutton.png" />
+    <Resource Include="resources\frame\maximizebutton.png" LogicalName="resources/frame/maximizebutton.png" />
+    <Resource Include="resources\frame\titlerightinactive.png" LogicalName="resources/frame/titlerightinactive.png" />
+    <Resource Include="resources\frame\maximizebuttondisabled.png" LogicalName="resources/frame/maximizebuttondisabled.png" />
+    <Resource Include="resources\frame\minimizebuttonhover.png" LogicalName="resources/frame/minimizebuttonhover.png" />
+    <Resource Include="resources\frame\bottomleft.png" LogicalName="resources/frame/bottomleft.png" />
+    <Resource Include="resources\frame\closebuttoninactive.png" LogicalName="resources/frame/closebuttoninactive.png" />
+    <Resource Include="resources\frame\bottomright.png" LogicalName="resources/frame/bottomright.png" />
+    <Resource Include="resources\frame\sideleftinactive.png" LogicalName="resources/frame/sideleftinactive.png" />
+    <Resource Include="resources\frame\titlemiddle.png" LogicalName="resources/frame/titlemiddle.png" />
+    <Resource Include="resources\frame\maximizebuttonhover.png" LogicalName="resources/frame/maximizebuttonhover.png" />
+    <Resource Include="resources\frame\maximizebuttonpressed.png" LogicalName="resources/frame/maximizebuttonpressed.png" />
+    <Resource Include="resources\frame\minimizebutton.png" LogicalName="resources/frame/minimizebutton.png" />
+    <Resource Include="resources\frame\restorebuttondisabled.png" LogicalName="resources/frame/restorebuttondisabled.png" />
+    <Resource Include="resources\frame\restorebuttonpressed.png" LogicalName="resources/frame/restorebuttonpressed.png" />
+    <Resource Include="resources\frame\maximizebuttoninactive.png" LogicalName="resources/frame/maximizebuttoninactive.png" />
+    <Resource Include="resources\frame\titleleftinactive.png" LogicalName="resources/frame/titleleftinactive.png" />
+    <Resource Include="resources\frame\bottomleftinactive.png" LogicalName="resources/frame/bottomleftinactive.png" />
+    <Resource Include="resources\frame\restorebuttonhover.png" LogicalName="resources/frame/restorebuttonhover.png" />
+    <Resource Include="resources\frame\bottomrightinactive.png" LogicalName="resources/frame/bottomrightinactive.png" />
+  </ItemGroup>
+  <ItemGroup />
+</Project>

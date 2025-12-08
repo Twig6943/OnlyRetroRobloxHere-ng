@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window x:Class="OnlyRetroRobloxHere.Launcher.UI.Dialogs.JoinAuthServerWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:OnlyRetroRobloxHere.Launcher.UI.Dialogs" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:viewmodels="clr-namespace:OnlyRetroRobloxHere.Launcher.UI.ViewModels.Dialogs" Title="Join an Authorized Server" Width="500" Height="140" TextOptions.TextFormattingMode="Display" Closing="Window_Closing" Loaded="Window_Loaded">
+  <Grid Background="#FF000000">
+    <Border Margin="10">
+      <StackPanel>
+        <TextBlock Name="StatusText" FontSize="16" Style="{StaticResource TextBlockWhite}" TextAlignment="Center" Text="{Binding Path=Status, Mode=OneWay}" />
+        <TextBox Name="KeyTextBox" Margin="0,4" IsEnabled="{Binding Path=KeyTextBoxEnabled, Mode=OneWay}" Text="{Binding Path=KeyText, Mode=TwoWay}" />
+        <Button Name="SubmitButton" Width="100" Content="Submit" IsEnabled="{Binding Path=SubmitButtonEnabled, Mode=OneWay}" Click="SubmitButton_Click" />
+      </StackPanel>
+    </Border>
+  </Grid>
+</Window>

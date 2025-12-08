@@ -1,0 +1,28 @@
+using System;
+using System.Globalization;
+using System.Windows;
+using System.Windows.Data;
+
+namespace OnlyRetroRobloxHere.Launcher.UI.Converters;
+
+[ValueConversion(typeof(bool), typeof(Visibility))]
+internal class BoolToVisibilityConverter : IValueConverter
+{
+	public object Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
+	{
+		if (!(value is bool flag))
+		{
+			throw new ArgumentException("Convert value must be a boolean");
+		}
+		if (!(parameter?.ToString() == "opposite"))
+		{
+			return (!flag) ? Visibility.Collapsed : Visibility.Visible;
+		}
+		return flag ? Visibility.Collapsed : Visibility.Visible;
+	}
+
+	public object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+	{
+		throw new NotImplementedException("ConvertBack");
+	}
+}

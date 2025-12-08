@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pages:BasePage x:Class="OnlyRetroRobloxHere.Launcher.UI.Pages.SettingsPages.ServerSettingsPage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:OnlyRetroRobloxHere.Launcher.UI.Pages.SettingsPages" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:pages="clr-namespace:OnlyRetroRobloxHere.Launcher.UI.Pages" xmlns:viewmodels="clr-namespace:OnlyRetroRobloxHere.Launcher.UI.ViewModels.Pages.SettingsPages" Title="ServerSettingsPage" Background="#00FFFFFF" FontFamily="Verdana" TextOptions.TextFormattingMode="Display">
+  <StackPanel Margin="10">
+    <GroupBox Margin="0,0,0,2" Padding="2" Foreground="#AFCDE0" Header="Scripting" UseLayoutRounding="True">
+      <StackPanel>
+        <StackPanel Orientation="Horizontal">
+          <CheckBox Margin="0,0,5,0" Content="Custom In-game APIs" IsChecked="{Binding Path=CustomInGameApisEnabled, Mode=TwoWay}" />
+          <Image Height="14" RenderOptions.BitmapScalingMode="HighQuality" Source="pack://application:,,,/OnlyRetroRobloxHere;component/Resources/Launcher/Help.png" ToolTip="Enables custom Lua APIs." />
+        </StackPanel>
+      </StackPanel>
+    </GroupBox>
+    <GroupBox Margin="0,0,0,2" Padding="2" Foreground="#AFCDE0" Header="Auto Save Config" UseLayoutRounding="True">
+      <StackPanel>
+        <StackPanel Margin="0,0,0,2" Orientation="Horizontal" Visibility="{Binding Path=AutoSaveDebugVisibility, Mode=OneWay}">
+          <CheckBox Margin="0,0,5,0" Content="Debug" FlowDirection="RightToLeft" IsChecked="{Binding Path=AutoSaveDebug, Mode=TwoWay}" />
+          <Image Height="14" RenderOptions.BitmapScalingMode="HighQuality" Source="pack://application:,,,/OnlyRetroRobloxHere;component/Resources/Launcher/Warning.png" ToolTip="This is a debug option. Disable unless you know what you are doing." />
+        </StackPanel>
+        <StackPanel Margin="0,0,0,2" Orientation="Horizontal">
+          <TextBlock Margin="0,0,4,0" VerticalAlignment="Center" Style="{StaticResource TextBlockWhite}" Text="Changes Per Player:" />
+          <TextBox Width="50" Text="{Binding Path=AutoSaveChangesPerPlayer, Converter={StaticResource StringToUIntConverter}, ConverterParameter=100, Mode=TwoWay}" />
+        </StackPanel>
+        <StackPanel Margin="0,0,0,2" Orientation="Horizontal">
+          <TextBlock Margin="0,0,4,0" VerticalAlignment="Center" Style="{StaticResource TextBlockWhite}" Text="Check Interval in seconds:" />
+          <TextBox Width="50" Text="{Binding Path=AutoSaveCheckInterval, Converter={StaticResource StringToUIntConverter}, ConverterParameter=1800, Mode=TwoWay}" />
+        </StackPanel>
+        <StackPanel Margin="0,0,0,2" Orientation="Horizontal">
+          <TextBlock Margin="0,0,4,0" VerticalAlignment="Center" Style="{StaticResource TextBlockWhite}" Text="Save Cooldown in seconds:" />
+          <TextBox Width="50" Text="{Binding Path=AutoSaveCooldown, Converter={StaticResource StringToUIntConverter}, ConverterParameter=900, Mode=TwoWay}" />
+        </StackPanel>
+        <Button Width="120" HorizontalAlignment="Left" Content="Reset to Defaults" Click="OnAutoSaveResetClicked" />
+      </StackPanel>
+    </GroupBox>
+    <GroupBox Padding="2" Foreground="#AFCDE0" Header="Fun" UseLayoutRounding="True">
+      <StackPanel>
+        <CheckBox Content="Egg Hunt Mode (2008E only)" IsChecked="{Binding Path=EggHuntMode, Mode=TwoWay}" />
+      </StackPanel>
+    </GroupBox>
+  </StackPanel>
+</pages:BasePage>

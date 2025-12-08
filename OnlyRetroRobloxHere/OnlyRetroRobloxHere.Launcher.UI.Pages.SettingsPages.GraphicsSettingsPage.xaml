@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pages:BasePage x:Class="OnlyRetroRobloxHere.Launcher.UI.Pages.SettingsPages.GraphicsSettingsPage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:OnlyRetroRobloxHere.Launcher.UI.Pages.SettingsPages" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:pages="clr-namespace:OnlyRetroRobloxHere.Launcher.UI.Pages" xmlns:viewmodels="clr-namespace:OnlyRetroRobloxHere.Launcher.UI.ViewModels.Pages.SettingsPages" Title="GraphicsSettingsPage" Background="#00FFFFFF" FontFamily="Verdana" TextOptions.TextFormattingMode="Display">
+  <StackPanel Margin="10">
+    <GroupBox Margin="0,0,0,2" Padding="2" Foreground="#AFCDE0" Header="GUI" UseLayoutRounding="True">
+      <StackPanel>
+        <StackPanel Margin="0,0,0,4" Orientation="Horizontal">
+          <CheckBox Margin="0,0,5,0" Content="Experimental Playerlist Enabled for 2011E" IsChecked="{Binding Path=ExperimentalPlayerlistEnabled, Mode=TwoWay}" />
+          <Image Height="14" RenderOptions.BitmapScalingMode="HighQuality" Source="pack://application:,,,/OnlyRetroRobloxHere;component/Resources/Launcher/Help.png" ToolTip="Enables the playerlist that was only activated in play solo or when playing Welcome to Roblox Building." />
+        </StackPanel>
+        <StackPanel Margin="0,0,0,4" Orientation="Horizontal">
+          <CheckBox Margin="0,0,5,0" Content="Longer Player Name Support for 2007E-2011E" IsChecked="{Binding Path=ClientLargerPlayerListNameLength, Mode=TwoWay}" />
+          <Image Height="14" RenderOptions.BitmapScalingMode="HighQuality" Source="pack://application:,,,/OnlyRetroRobloxHere;component/Resources/Launcher/Help.png" ToolTip="Increases the cut-off point for player names in the playerlist." />
+        </StackPanel>
+        <CheckBox Content="Dark Mode for 2007E-2011E" IsChecked="{Binding Path=ClientLegacyUIDarkMode, Mode=TwoWay}" />
+      </StackPanel>
+    </GroupBox>
+    <GroupBox Margin="0,0,0,2" Padding="2" Foreground="#AFCDE0" Header="Screenshots" UseLayoutRounding="True">
+      <StackPanel>
+        <StackPanel Orientation="Horizontal">
+          <CheckBox Margin="0,0,5,0" Content="Higher Quality Screenshots for 2010L-2013E" IsChecked="{Binding Path=ClientHigherQualityScreenshots, Mode=TwoWay}" />
+          <Image Height="14" RenderOptions.BitmapScalingMode="HighQuality" Source="pack://application:,,,/OnlyRetroRobloxHere;component/Resources/Launcher/Help.png" ToolTip="Saves screenshots as PNGs instead of JPGs." />
+        </StackPanel>
+      </StackPanel>
+    </GroupBox>
+    <GroupBox Margin="0,0,0,2" Padding="2" Foreground="#AFCDE0" Header="Rendering" UseLayoutRounding="True">
+      <StackPanel>
+        <StackPanel Margin="0,0,0,2" Orientation="Horizontal">
+          <TextBlock Margin="0,0,5,0" Style="{StaticResource TextBlockWhite}" Text="Custom Graphics API" />
+          <Image Height="14" RenderOptions.BitmapScalingMode="HighQuality" Source="pack://application:,,,/OnlyRetroRobloxHere;component/Resources/Launcher/Help.png" ToolTip="Changes the graphics API that is used for rendering. Not guaranteed to improve performance." />
+        </StackPanel>
+        <ComboBox Width="200" HorizontalAlignment="Left" ItemsSource="{Binding Path=CustomGraphicsApis, Mode=OneTime}" SelectedItem="{Binding Path=CustomGraphicsApi, Mode=TwoWay}">
+          <ItemsControl.ItemTemplate>
+            <DataTemplate>
+              <TextBlock Text="{Binding Converter={StaticResource EnumToDescriptionConverter}}" />
+            </DataTemplate>
+          </ItemsControl.ItemTemplate>
+        </ComboBox>
+      </StackPanel>
+    </GroupBox>
+    <GroupBox Margin="0,0,0,2" Padding="2" Foreground="#AFCDE0" Header="Maximum FPS [debug only]" UseLayoutRounding="True" Visibility="{Binding Path=FPSVisibility, Mode=OneTime}">
+      <StackPanel>
+        <StackPanel Margin="0,0,0,2" Orientation="Horizontal">
+          <TextBlock Margin="0,0,4,0" VerticalAlignment="Center" Style="{StaticResource TextBlockWhite}" Text="FPS Cap for 2008M &amp; earlier:" />
+          <TextBox Width="50" Text="{Binding Path=FPSCapOlder, Converter={StaticResource StringToUIntConverter}, ConverterParameter=60, Mode=TwoWay}" />
+          <TextBlock Margin="4,0,0,0" VerticalAlignment="Center" Style="{StaticResource TextBlockWhite}" Text="Default is 30. Valid range is 30-240." />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+          <TextBlock Margin="0,0,4,0" VerticalAlignment="Center" Style="{StaticResource TextBlockWhite}" Text="FPS Cap for 2009E &amp; later:" />
+          <TextBox Width="50" Text="{Binding Path=FPSCap, Converter={StaticResource StringToUIntConverter}, ConverterParameter=60, Mode=TwoWay}" />
+          <TextBlock Margin="4,0,0,0" VerticalAlignment="Center" Style="{StaticResource TextBlockWhite}" Text="Default is 60. Valid range is 60-240." />
+        </StackPanel>
+      </StackPanel>
+    </GroupBox>
+    <GroupBox Margin="0,0,0,2" Padding="2" Foreground="#AFCDE0" Header="Performance" UseLayoutRounding="True">
+      <StackPanel>
+        <CheckBox Margin="0,0,5,0" Content="Optimized Client Start-up" IsChecked="{Binding Path=OptimisedClientStartup, Mode=TwoWay}" />
+      </StackPanel>
+    </GroupBox>
+    <GroupBox Margin="0,0,0,2" Padding="2" Foreground="#AFCDE0" Header="Debug" UseLayoutRounding="True" Visibility="{Binding Path=DebugShowWebServerWindowVisibility, Mode=OneTime}">
+      <StackPanel>
+        <StackPanel Orientation="Horizontal" Visibility="{Binding Path=DebugShowWebServerWindowVisibility, Mode=OneTime}">
+          <CheckBox Margin="0,0,5,0" Content="Show Web Server Window" IsChecked="{Binding Path=DebugShowWebServerWindow, Mode=TwoWay}" />
+          <Image Height="14" RenderOptions.BitmapScalingMode="HighQuality" Source="pack://application:,,,/OnlyRetroRobloxHere;component/Resources/Launcher/Warning.png" ToolTip="This is a debug option. Disable unless you know what you are doing." />
+        </StackPanel>
+      </StackPanel>
+    </GroupBox>
+  </StackPanel>
+</pages:BasePage>

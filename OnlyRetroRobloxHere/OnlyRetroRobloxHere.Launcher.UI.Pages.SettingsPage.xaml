@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<local:BasePage x:Class="OnlyRetroRobloxHere.Launcher.UI.Pages.SettingsPage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:controls="clr-namespace:OnlyRetroRobloxHere.Launcher.UI.Controls" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:OnlyRetroRobloxHere.Launcher.UI.Pages" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:viewmodels="clr-namespace:OnlyRetroRobloxHere.Launcher.UI.ViewModels.Pages" Title="SettingsPage" FontFamily="Verdana" TextOptions.TextFormattingMode="Display">
+  <Grid>
+    <Grid Margin="10">
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="5*" />
+        <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+      <controls:StandardBox Grid.RowSpan="999" Grid.Column="0" Margin="0,0,10,0" Padding="0" HeaderText="{Binding Path=HeaderText, Mode=OneWay}">
+        <Frame Name="NavigationFrame" NavigationUIVisibility="Hidden" Source="" />
+      </controls:StandardBox>
+      <controls:StandardBox Grid.Column="1" VerticalAlignment="Top" HeaderText="Settings">
+        <StackPanel>
+          <controls:SelectableButton x:Name="LauncherNavivationButton" Click="OnNavigationButtonClick" Margin="0,0,0,2" Content="Launcher" IsSelected="False" Style="{StaticResource BrowseButton}" Tag="Launcher" />
+          <controls:SelectableButton Click="OnNavigationButtonClick" Margin="0,0,0,2" Content="Client" IsSelected="False" Style="{StaticResource BrowseButton}" Tag="Graphics" />
+          <controls:SelectableButton Click="OnNavigationButtonClick" Margin="0,0,0,2" Content="Server" IsSelected="False" Style="{StaticResource BrowseButton}" Tag="Server" />
+          <controls:SelectableButton Click="OnNavigationButtonClick" Margin="0,0,0,2" Content="Text to Speech" IsSelected="False" Style="{StaticResource BrowseButton}" Tag="TTS" />
+        </StackPanel>
+      </controls:StandardBox>
+      <StackPanel Grid.Row="1" Grid.Column="1" Width="139">
+        <Image Grid.Row="1" Grid.Column="1" Width="139" Height="522" RenderOptions.BitmapScalingMode="HighQuality" Source="{Binding Path=AdSource, Mode=OneWay}" />
+        <Button Grid.Row="2" Grid.Column="1" Padding="0" HorizontalAlignment="Left" Background="#00FFFFFF" BorderThickness="0" Content="[ report ]" FontSize="10" Foreground="{StaticResource LinkColour}" Style="{StaticResource ButtonNoEffects}" Click="OnReportButtonClicked" />
+      </StackPanel>
+    </Grid>
+    <Grid ZIndex="999" Background="#7F777777" Visibility="{Binding Path=TrollModalVisibility, Mode=OneWay}">
+      <controls:StandardBox HorizontalAlignment="Center" VerticalAlignment="Center" HeaderVisibility="Collapsed">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+          </Grid.RowDefinitions>
+          <StackPanel Orientation="Horizontal">
+            <Image Width="200" RenderOptions.BitmapScalingMode="HighQuality" Source="pack://application:,,,/OnlyRetroRobloxHere;component/Resources/Launcher/Trollface.png" />
+            <TextBlock VerticalAlignment="Center" FontSize="50" FontWeight="Bold" Style="{StaticResource TextBlockWhite}" Text="U MAD BRO?" />
+            <Image Width="200" RenderOptions.BitmapScalingMode="HighQuality" RenderTransformOrigin="0.5,0.5" Source="pack://application:,,,/OnlyRetroRobloxHere;component/Resources/Launcher/Trollface.png">
+              <UIElement.RenderTransform>
+                <ScaleTransform ScaleX="-1" />
+              </UIElement.RenderTransform>
+            </Image>
+          </StackPanel>
+          <StackPanel Grid.Row="1" HorizontalAlignment="Center" Orientation="Horizontal">
+            <Button Width="200" Height="50" Margin="0,0,10,0" Content="Yes" FontSize="30" Click="OnTrollYesButtonClicked" />
+            <Button Width="200" Height="50" Content="Yes" FontSize="30" Click="OnTrollYesButtonClicked" />
+          </StackPanel>
+        </Grid>
+      </controls:StandardBox>
+    </Grid>
+  </Grid>
+</local:BasePage>

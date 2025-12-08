@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36717.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlyRetroRobloxHere", "OnlyRetroRobloxHere\OnlyRetroRobloxHere.csproj", "{7A99836B-2757-9798-B855-17E68F6036F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlyRetroRobloxHere.Common", "OnlyRetroRobloxHere.Common\OnlyRetroRobloxHere.Common.csproj", "{511F0E72-DA98-E140-45B9-A4F4BE59A38A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlyRetroRobloxHere.ServerAuthInterface", "OnlyRetroRobloxHere.ServerAuthInterface\OnlyRetroRobloxHere.ServerAuthInterface.csproj", "{F8A2CEB7-757C-8CC5-04BB-5985D27B43F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wpf.XP", "Wpf.XP\Wpf.XP.csproj", "{D9B14845-122A-C599-1432-6C40B71C81C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlyRetroRobloxHere.WebServer", "OnlyRetroRobloxHere.WebServer\OnlyRetroRobloxHere.WebServer.csproj", "{1F627483-1CFB-082C-833C-A927ACBD055B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A99836B-2757-9798-B855-17E68F6036F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A99836B-2757-9798-B855-17E68F6036F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A99836B-2757-9798-B855-17E68F6036F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A99836B-2757-9798-B855-17E68F6036F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{511F0E72-DA98-E140-45B9-A4F4BE59A38A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{511F0E72-DA98-E140-45B9-A4F4BE59A38A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{511F0E72-DA98-E140-45B9-A4F4BE59A38A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{511F0E72-DA98-E140-45B9-A4F4BE59A38A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8A2CEB7-757C-8CC5-04BB-5985D27B43F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8A2CEB7-757C-8CC5-04BB-5985D27B43F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8A2CEB7-757C-8CC5-04BB-5985D27B43F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8A2CEB7-757C-8CC5-04BB-5985D27B43F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9B14845-122A-C599-1432-6C40B71C81C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9B14845-122A-C599-1432-6C40B71C81C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9B14845-122A-C599-1432-6C40B71C81C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9B14845-122A-C599-1432-6C40B71C81C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F627483-1CFB-082C-833C-A927ACBD055B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F627483-1CFB-082C-833C-A927ACBD055B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F627483-1CFB-082C-833C-A927ACBD055B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F627483-1CFB-082C-833C-A927ACBD055B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9FDC55E8-4A3B-43D5-9587-E6C375DBC610}
+	EndGlobalSection
+EndGlobal

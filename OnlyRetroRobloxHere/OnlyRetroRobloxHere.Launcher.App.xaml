@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application x:Class="OnlyRetroRobloxHere.Launcher.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:converters="clr-namespace:OnlyRetroRobloxHere.Launcher.UI.Converters" xmlns:local="clr-namespace:OnlyRetroRobloxHere.Launcher" StartupUri="/OnlyRetroRobloxHere.Launcher.UI.Dialogs.MainWindow.xaml">
+  <Application.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="UI/Style/Elements.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+      <converters:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+      <converters:BoolToVisibilityHiddenConverter x:Key="BoolToVisibilityHiddenConverter" />
+      <converters:BrickIdToBrushConverter x:Key="BrickIdToBrushConverter" />
+      <converters:InverseBooleanConverter x:Key="InverseBooleanConverter" />
+      <converters:TernaryStringConverter x:Key="TernaryStringConverter" />
+      <converters:StringFormatConverter x:Key="StringFormatConverter" />
+      <converters:MultiStringFormatConverter x:Key="MultiStringFormatConverter" />
+      <converters:EnumToDescriptionConverter x:Key="EnumToDescriptionConverter" />
+      <converters:StringToUIntConverter x:Key="StringToUIntConverter" />
+      <converters:StringToUShortConverter x:Key="StringToUShortConverter" />
+      <converters:StringToIntConverter x:Key="StringToIntConverter" />
+      <converters:StringToPosLongConverter x:Key="StringToPosLongConverter" />
+      <converters:StringToULongConverter x:Key="StringToULongConverter" />
+    </ResourceDictionary>
+  </Application.Resources>
+</Application>

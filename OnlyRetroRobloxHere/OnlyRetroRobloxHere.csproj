@@ -1,0 +1,351 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>OnlyRetroRobloxHere</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWPF>True</UseWPF>
+	<UseWindowsForms>true</UseWindowsForms>
+    <TargetFramework>netcoreapp6.0-windows</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <RootNamespace>OnlyRetroRobloxHere</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="resources\launcher\bannerlong.png" />
+    <None Remove="resources\ads\vertical\53.jpg" />
+    <None Remove="resources\ads\vertical\52.jpg" />
+    <None Remove="resources\ads\vertical\51.jpg" />
+    <None Remove="resources\ads\vertical\50.jpg" />
+    <None Remove="resources\ads\vertical\57.jpg" />
+    <None Remove="resources\ads\vertical\56.jpg" />
+    <None Remove="resources\ads\vertical\55.jpg" />
+    <None Remove="resources\ads\vertical\54.jpg" />
+    <None Remove="resources\ads\vertical\59.jpg" />
+    <None Remove="resources\ads\vertical\58.jpg" />
+    <None Remove="resources\launcher\progressindicator.gif" />
+    <None Remove="resources\ads\vertical\61.jpg" />
+    <None Remove="resources\ads\vertical\63.jpg" />
+    <None Remove="resources\ads\vertical\60.jpg" />
+    <None Remove="resources\ads\vertical\65.jpg" />
+    <None Remove="resources\ads\vertical\62.jpg" />
+    <None Remove="resources\ads\vertical\67.jpg" />
+    <None Remove="resources\ads\vertical\64.jpg" />
+    <None Remove="resources\ads\vertical\66.jpg" />
+    <None Remove="resources\ads\vertical\68.jpg" />
+    <None Remove="resources\ads\vertical\35.jpg" />
+    <None Remove="resources\ads\vertical\34.jpg" />
+    <None Remove="resources\ads\vertical\37.jpg" />
+    <None Remove="resources\ads\vertical\36.jpg" />
+    <None Remove="resources\ads\vertical\31.jpg" />
+    <None Remove="resources\ads\vertical\30.jpg" />
+    <None Remove="resources\ads\vertical\33.jpg" />
+    <None Remove="resources\ads\vertical\32.jpg" />
+    <None Remove="resources\ads\vertical\39.jpg" />
+    <None Remove="resources\ads\vertical\38.jpg" />
+    <None Remove="resources\ads\vertical\43.jpg" />
+    <None Remove="resources\ads\vertical\41.jpg" />
+    <None Remove="resources\ads\vertical\42.jpg" />
+    <None Remove="resources\ads\vertical\47.jpg" />
+    <None Remove="resources\ads\vertical\40.jpg" />
+    <None Remove="resources\ads\vertical\45.jpg" />
+    <None Remove="resources\ads\vertical\46.jpg" />
+    <None Remove="resources\ads\vertical\44.jpg" />
+    <None Remove="resources\ads\vertical\49.jpg" />
+    <None Remove="resources\ads\vertical\48.jpg" />
+    <None Remove="resources\ads\vertical\17.jpg" />
+    <None Remove="resources\ads\vertical\16.jpg" />
+    <None Remove="resources\ads\vertical\15.jpg" />
+    <None Remove="resources\ads\vertical\14.jpg" />
+    <None Remove="resources\ads\vertical\13.jpg" />
+    <None Remove="resources\ads\vertical\12.jpg" />
+    <None Remove="resources\ads\vertical\11.jpg" />
+    <None Remove="resources\ads\vertical\10.jpg" />
+    <None Remove="resources\ads\vertical\19.jpg" />
+    <None Remove="resources\ads\vertical\18.jpg" />
+    <None Remove="resources\launcher\carbon.png" />
+    <None Remove="resources\ads\vertical\25.jpg" />
+    <None Remove="resources\ads\vertical\27.jpg" />
+    <None Remove="resources\ads\vertical\24.jpg" />
+    <None Remove="resources\ads\vertical\21.jpg" />
+    <None Remove="resources\ads\vertical\26.jpg" />
+    <None Remove="resources\ads\vertical\23.jpg" />
+    <None Remove="resources\ads\vertical\20.jpg" />
+    <None Remove="resources\ads\vertical\22.jpg" />
+    <None Remove="resources\ads\vertical\29.jpg" />
+    <None Remove="resources\ads\vertical\28.jpg" />
+    <None Remove="resources\launcher\playnowbutton.png" />
+    <None Remove="resources\snowfall\snowflake5.png" />
+    <None Remove="resources\snowfall\snowflake4.png" />
+    <None Remove="resources\snowfall\snowflake3.png" />
+    <None Remove="resources\snowfall\snowflake2.png" />
+    <None Remove="resources\snowfall\snowflake1.png" />
+    <None Remove="resources\sounds\songs\rock.ogg" />
+    <None Remove="resources\ads\bc\2.jpg" />
+    <None Remove="resources\ads\bc\1.jpg" />
+    <None Remove="resources\ads\bc\3.jpg" />
+    <None Remove="resources\membership\page\upgradebutton.png" />
+    <None Remove="resources\thumbnails\customitems\pants.png" />
+    <None Remove="resources\sounds\songs\funk.ogg" />
+    <None Remove="resources\membership\page\bc_monthly_disabled.png" />
+    <None Remove="resources\membership\page\bc_12months.png" />
+    <None Remove="resources\membership\page\tbc_6months_disabled.png" />
+    <None Remove="resources\thumbnails\customitems\shirt.png" />
+    <None Remove="resources\launcher\catalog\bconly.png" />
+    <None Remove="resources\membership\page\bc_6months.png" />
+    <None Remove="resources\launcher\bannerlongwinter.png" />
+    <None Remove="resources\socials\discord\discord-mark-white.png" />
+    <None Remove="resources\launcher\warning.png" />
+    <None Remove="resources\launcher\help.png" />
+    <None Remove="resources\sounds\songs\jazz.ogg" />
+    <None Remove="resources\thumbnails\default.png" />
+    <None Remove="resources\launcher\pageturn.wav" />
+    <None Remove="resources\robloxicons\roblox2007.ico" />
+    <None Remove="resources\membership\page\tbc_monthly.png" />
+    <None Remove="resources\launcher\secrets\boombox.png" />
+    <None Remove="resources\blank.png" />
+    <None Remove="resources\socials\github\github-mark-white.png" />
+    <None Remove="resources\membership\page\bc_lifetime_disabled.png" />
+    <None Remove="resources\launcher\hostbuttonhover.png" />
+    <None Remove="resources\unavailable.jpg" />
+    <None Remove="resources\membership\page\tbc_12months.png" />
+    <None Remove="resources\launcher\theteam\mattbody.png" />
+    <None Remove="resources\bannerwinter.png" />
+    <None Remove="resources\launcher\trollface.png" />
+    <None Remove="resources\membership\page\bc_monthly.png" />
+    <None Remove="resources\membership\page\tbc_6months.png" />
+    <None Remove="resources\membership\page\bc_12months_disabled.png" />
+    <None Remove="resources\sounds\songs\electronic.ogg" />
+    <None Remove="resources\launcher\playslideshowplaceholderimage.jpg" />
+    <None Remove="resources\sounds\cashregister.ogg" />
+    <None Remove="resources\membership\page\bc_6months_disabled.png" />
+    <None Remove="resources\cursors\hammercursor.cur" />
+    <None Remove="resources\membership\page\bc_lifetime.png" />
+    <None Remove="resources\launcher\secretactivated.wav" />
+    <None Remove="resources\membership\page\tbc_12months_disabled.png" />
+    <None Remove="resources\launcher\playthislong.png" />
+    <None Remove="resources\launcher\catalog\limited.png" />
+    <None Remove="resources\membership\page\obcicon.png" />
+    <None Remove="resources\membership\outrageousbuildersclub.png" />
+    <None Remove="resources\membership\page\tbc_lifetime.png" />
+    <None Remove="resources\membership\none.png" />
+    <None Remove="resources\launcher\bullet.png" />
+    <None Remove="resources\membership\turbobuildersclub.png" />
+    <None Remove="resources\figures\figure7.png" />
+    <None Remove="resources\figures\figure8.png" />
+    <None Remove="resources\figures\figure5.png" />
+    <None Remove="resources\figures\figure6.png" />
+    <None Remove="resources\figures\figure3.png" />
+    <None Remove="resources\figures\figure4.png" />
+    <None Remove="resources\figures\figure1.png" />
+    <None Remove="resources\figures\figure2.png" />
+    <None Remove="resources\membership\page\upgradebuttondisabled.png" />
+    <None Remove="resources\thumbnails\customitems\tshirt.png" />
+    <None Remove="resources\launcher\theteam\matthead.png" />
+    <None Remove="resources\sounds\explosion.ogg" />
+    <None Remove="resources\cursors\hammerovercursor.cur" />
+    <None Remove="resources\launcher\hostbutton.png" />
+    <None Remove="resources\banner.png" />
+    <None Remove="resources\sounds\ping.ogg" />
+    <None Remove="resources\membership\page\tbc_lifetime_disabled.png" />
+    <None Remove="resources\membership\page\tbc_monthly_disabled.png" />
+    <None Remove="resources\membership\page\obc_monthly.png" />
+    <None Remove="resources\figures\small\figure7.png" />
+    <None Remove="resources\figures\small\figure8.png" />
+    <None Remove="resources\figures\small\figure5.png" />
+    <None Remove="resources\launcher\catalog\limitedunique.png" />
+    <None Remove="resources\figures\small\figure6.png" />
+    <None Remove="resources\figures\small\figure3.png" />
+    <None Remove="resources\figures\small\figure4.png" />
+    <None Remove="resources\figures\small\figure1.png" />
+    <None Remove="resources\figures\small\figure2.png" />
+    <None Remove="resources\ads\vertical\7.jpg" />
+    <None Remove="resources\ads\vertical\5.jpg" />
+    <None Remove="resources\ads\vertical\6.jpg" />
+    <None Remove="resources\ads\vertical\3.jpg" />
+    <None Remove="resources\ads\vertical\4.jpg" />
+    <None Remove="resources\ads\vertical\1.jpg" />
+    <None Remove="resources\ads\vertical\2.jpg" />
+    <None Remove="resources\ads\vertical\9.jpg" />
+    <None Remove="resources\ads\vertical\8.jpg" />
+    <None Remove="resources\launcher\hostbuttonpressed.png" />
+    <None Remove="resources\membership\buildersclub.png" />
+    <Page Remove="OnlyRetroRobloxHere.Launcher.App.xaml" />
+    <ApplicationDefinition Include="OnlyRetroRobloxHere.Launcher.App.xaml" />
+    <Resource Include="resources\launcher\bannerlong.png" LogicalName="resources/launcher/bannerlong.png" />
+    <Resource Include="resources\ads\vertical\53.jpg" LogicalName="resources/ads/vertical/53.jpg" />
+    <Resource Include="resources\ads\vertical\52.jpg" LogicalName="resources/ads/vertical/52.jpg" />
+    <Resource Include="resources\ads\vertical\51.jpg" LogicalName="resources/ads/vertical/51.jpg" />
+    <Resource Include="resources\ads\vertical\50.jpg" LogicalName="resources/ads/vertical/50.jpg" />
+    <Resource Include="resources\ads\vertical\57.jpg" LogicalName="resources/ads/vertical/57.jpg" />
+    <Resource Include="resources\ads\vertical\56.jpg" LogicalName="resources/ads/vertical/56.jpg" />
+    <Resource Include="resources\ads\vertical\55.jpg" LogicalName="resources/ads/vertical/55.jpg" />
+    <Resource Include="resources\ads\vertical\54.jpg" LogicalName="resources/ads/vertical/54.jpg" />
+    <Resource Include="resources\ads\vertical\59.jpg" LogicalName="resources/ads/vertical/59.jpg" />
+    <Resource Include="resources\ads\vertical\58.jpg" LogicalName="resources/ads/vertical/58.jpg" />
+    <EmbeddedResource Include="resources\launcher\progressindicator.gif" LogicalName="resources/launcher/progressindicator.gif" />
+    <Resource Include="resources\ads\vertical\61.jpg" LogicalName="resources/ads/vertical/61.jpg" />
+    <Resource Include="resources\ads\vertical\63.jpg" LogicalName="resources/ads/vertical/63.jpg" />
+    <Resource Include="resources\ads\vertical\60.jpg" LogicalName="resources/ads/vertical/60.jpg" />
+    <Resource Include="resources\ads\vertical\65.jpg" LogicalName="resources/ads/vertical/65.jpg" />
+    <Resource Include="resources\ads\vertical\62.jpg" LogicalName="resources/ads/vertical/62.jpg" />
+    <Resource Include="resources\ads\vertical\67.jpg" LogicalName="resources/ads/vertical/67.jpg" />
+    <Resource Include="resources\ads\vertical\64.jpg" LogicalName="resources/ads/vertical/64.jpg" />
+    <Resource Include="resources\ads\vertical\66.jpg" LogicalName="resources/ads/vertical/66.jpg" />
+    <Resource Include="resources\ads\vertical\68.jpg" LogicalName="resources/ads/vertical/68.jpg" />
+    <Resource Include="resources\ads\vertical\35.jpg" LogicalName="resources/ads/vertical/35.jpg" />
+    <Resource Include="resources\ads\vertical\34.jpg" LogicalName="resources/ads/vertical/34.jpg" />
+    <Resource Include="resources\ads\vertical\37.jpg" LogicalName="resources/ads/vertical/37.jpg" />
+    <Resource Include="resources\ads\vertical\36.jpg" LogicalName="resources/ads/vertical/36.jpg" />
+    <Resource Include="resources\ads\vertical\31.jpg" LogicalName="resources/ads/vertical/31.jpg" />
+    <Resource Include="resources\ads\vertical\30.jpg" LogicalName="resources/ads/vertical/30.jpg" />
+    <Resource Include="resources\ads\vertical\33.jpg" LogicalName="resources/ads/vertical/33.jpg" />
+    <Resource Include="resources\ads\vertical\32.jpg" LogicalName="resources/ads/vertical/32.jpg" />
+    <Resource Include="resources\ads\vertical\39.jpg" LogicalName="resources/ads/vertical/39.jpg" />
+    <Resource Include="resources\ads\vertical\38.jpg" LogicalName="resources/ads/vertical/38.jpg" />
+    <Resource Include="resources\ads\vertical\43.jpg" LogicalName="resources/ads/vertical/43.jpg" />
+    <Resource Include="resources\ads\vertical\41.jpg" LogicalName="resources/ads/vertical/41.jpg" />
+    <Resource Include="resources\ads\vertical\42.jpg" LogicalName="resources/ads/vertical/42.jpg" />
+    <Resource Include="resources\ads\vertical\47.jpg" LogicalName="resources/ads/vertical/47.jpg" />
+    <Resource Include="resources\ads\vertical\40.jpg" LogicalName="resources/ads/vertical/40.jpg" />
+    <Resource Include="resources\ads\vertical\45.jpg" LogicalName="resources/ads/vertical/45.jpg" />
+    <Resource Include="resources\ads\vertical\46.jpg" LogicalName="resources/ads/vertical/46.jpg" />
+    <Resource Include="resources\ads\vertical\44.jpg" LogicalName="resources/ads/vertical/44.jpg" />
+    <Resource Include="resources\ads\vertical\49.jpg" LogicalName="resources/ads/vertical/49.jpg" />
+    <Resource Include="resources\ads\vertical\48.jpg" LogicalName="resources/ads/vertical/48.jpg" />
+    <Resource Include="resources\ads\vertical\17.jpg" LogicalName="resources/ads/vertical/17.jpg" />
+    <Resource Include="resources\ads\vertical\16.jpg" LogicalName="resources/ads/vertical/16.jpg" />
+    <Resource Include="resources\ads\vertical\15.jpg" LogicalName="resources/ads/vertical/15.jpg" />
+    <Resource Include="resources\ads\vertical\14.jpg" LogicalName="resources/ads/vertical/14.jpg" />
+    <Resource Include="resources\ads\vertical\13.jpg" LogicalName="resources/ads/vertical/13.jpg" />
+    <Resource Include="resources\ads\vertical\12.jpg" LogicalName="resources/ads/vertical/12.jpg" />
+    <Resource Include="resources\ads\vertical\11.jpg" LogicalName="resources/ads/vertical/11.jpg" />
+    <Resource Include="resources\ads\vertical\10.jpg" LogicalName="resources/ads/vertical/10.jpg" />
+    <Resource Include="resources\ads\vertical\19.jpg" LogicalName="resources/ads/vertical/19.jpg" />
+    <Resource Include="resources\ads\vertical\18.jpg" LogicalName="resources/ads/vertical/18.jpg" />
+    <Resource Include="resources\launcher\carbon.png" LogicalName="resources/launcher/carbon.png" />
+    <Resource Include="resources\ads\vertical\25.jpg" LogicalName="resources/ads/vertical/25.jpg" />
+    <Resource Include="resources\ads\vertical\27.jpg" LogicalName="resources/ads/vertical/27.jpg" />
+    <Resource Include="resources\ads\vertical\24.jpg" LogicalName="resources/ads/vertical/24.jpg" />
+    <Resource Include="resources\ads\vertical\21.jpg" LogicalName="resources/ads/vertical/21.jpg" />
+    <Resource Include="resources\ads\vertical\26.jpg" LogicalName="resources/ads/vertical/26.jpg" />
+    <Resource Include="resources\ads\vertical\23.jpg" LogicalName="resources/ads/vertical/23.jpg" />
+    <Resource Include="resources\ads\vertical\20.jpg" LogicalName="resources/ads/vertical/20.jpg" />
+    <Resource Include="resources\ads\vertical\22.jpg" LogicalName="resources/ads/vertical/22.jpg" />
+    <Resource Include="resources\ads\vertical\29.jpg" LogicalName="resources/ads/vertical/29.jpg" />
+    <Resource Include="resources\ads\vertical\28.jpg" LogicalName="resources/ads/vertical/28.jpg" />
+    <Resource Include="resources\launcher\playnowbutton.png" LogicalName="resources/launcher/playnowbutton.png" />
+    <Resource Include="resources\snowfall\snowflake5.png" LogicalName="resources/snowfall/snowflake5.png" />
+    <Resource Include="resources\snowfall\snowflake4.png" LogicalName="resources/snowfall/snowflake4.png" />
+    <Resource Include="resources\snowfall\snowflake3.png" LogicalName="resources/snowfall/snowflake3.png" />
+    <Resource Include="resources\snowfall\snowflake2.png" LogicalName="resources/snowfall/snowflake2.png" />
+    <Resource Include="resources\snowfall\snowflake1.png" LogicalName="resources/snowfall/snowflake1.png" />
+    <EmbeddedResource Include="resources\sounds\songs\rock.ogg" LogicalName="resources/sounds/songs/rock.ogg" />
+    <Resource Include="resources\ads\bc\2.jpg" LogicalName="resources/ads/bc/2.jpg" />
+    <Resource Include="resources\ads\bc\1.jpg" LogicalName="resources/ads/bc/1.jpg" />
+    <Resource Include="resources\ads\bc\3.jpg" LogicalName="resources/ads/bc/3.jpg" />
+    <Resource Include="resources\membership\page\upgradebutton.png" LogicalName="resources/membership/page/upgradebutton.png" />
+    <Resource Include="resources\thumbnails\customitems\pants.png" LogicalName="resources/thumbnails/customitems/pants.png" />
+    <EmbeddedResource Include="resources\sounds\songs\funk.ogg" LogicalName="resources/sounds/songs/funk.ogg" />
+    <Resource Include="resources\membership\page\bc_monthly_disabled.png" LogicalName="resources/membership/page/bc_monthly_disabled.png" />
+    <Resource Include="resources\membership\page\bc_12months.png" LogicalName="resources/membership/page/bc_12months.png" />
+    <Resource Include="resources\membership\page\tbc_6months_disabled.png" LogicalName="resources/membership/page/tbc_6months_disabled.png" />
+    <Resource Include="resources\thumbnails\customitems\shirt.png" LogicalName="resources/thumbnails/customitems/shirt.png" />
+    <Resource Include="resources\launcher\catalog\bconly.png" LogicalName="resources/launcher/catalog/bconly.png" />
+    <Resource Include="resources\membership\page\bc_6months.png" LogicalName="resources/membership/page/bc_6months.png" />
+    <Resource Include="resources\launcher\bannerlongwinter.png" LogicalName="resources/launcher/bannerlongwinter.png" />
+    <Resource Include="resources\socials\discord\discord-mark-white.png" LogicalName="resources/socials/discord/discord-mark-white.png" />
+    <Resource Include="resources\launcher\warning.png" LogicalName="resources/launcher/warning.png" />
+    <Resource Include="resources\launcher\help.png" LogicalName="resources/launcher/help.png" />
+    <EmbeddedResource Include="resources\sounds\songs\jazz.ogg" LogicalName="resources/sounds/songs/jazz.ogg" />
+    <Resource Include="resources\thumbnails\default.png" LogicalName="resources/thumbnails/default.png" />
+    <EmbeddedResource Include="resources\launcher\pageturn.wav" LogicalName="resources/launcher/pageturn.wav" />
+    <Resource Include="resources\robloxicons\roblox2007.ico" LogicalName="resources/robloxicons/roblox2007.ico" />
+    <Resource Include="resources\membership\page\tbc_monthly.png" LogicalName="resources/membership/page/tbc_monthly.png" />
+    <Resource Include="resources\launcher\secrets\boombox.png" LogicalName="resources/launcher/secrets/boombox.png" />
+    <Resource Include="resources\blank.png" LogicalName="resources/blank.png" />
+    <Resource Include="resources\socials\github\github-mark-white.png" LogicalName="resources/socials/github/github-mark-white.png" />
+    <Resource Include="resources\membership\page\bc_lifetime_disabled.png" LogicalName="resources/membership/page/bc_lifetime_disabled.png" />
+    <Resource Include="resources\launcher\hostbuttonhover.png" LogicalName="resources/launcher/hostbuttonhover.png" />
+    <Resource Include="resources\unavailable.jpg" LogicalName="resources/unavailable.jpg" />
+    <Resource Include="resources\membership\page\tbc_12months.png" LogicalName="resources/membership/page/tbc_12months.png" />
+    <Resource Include="resources\launcher\theteam\mattbody.png" LogicalName="resources/launcher/theteam/mattbody.png" />
+    <Resource Include="resources\bannerwinter.png" LogicalName="resources/bannerwinter.png" />
+    <Resource Include="resources\launcher\trollface.png" LogicalName="resources/launcher/trollface.png" />
+    <Resource Include="resources\membership\page\bc_monthly.png" LogicalName="resources/membership/page/bc_monthly.png" />
+    <Resource Include="resources\membership\page\tbc_6months.png" LogicalName="resources/membership/page/tbc_6months.png" />
+    <Resource Include="resources\membership\page\bc_12months_disabled.png" LogicalName="resources/membership/page/bc_12months_disabled.png" />
+    <EmbeddedResource Include="resources\sounds\songs\electronic.ogg" LogicalName="resources/sounds/songs/electronic.ogg" />
+    <Resource Include="resources\launcher\playslideshowplaceholderimage.jpg" LogicalName="resources/launcher/playslideshowplaceholderimage.jpg" />
+    <EmbeddedResource Include="resources\sounds\cashregister.ogg" LogicalName="resources/sounds/cashregister.ogg" />
+    <Resource Include="resources\membership\page\bc_6months_disabled.png" LogicalName="resources/membership/page/bc_6months_disabled.png" />
+    <Resource Include="resources\cursors\hammercursor.cur" LogicalName="resources/cursors/hammercursor.cur" />
+    <Resource Include="resources\membership\page\bc_lifetime.png" LogicalName="resources/membership/page/bc_lifetime.png" />
+    <EmbeddedResource Include="resources\launcher\secretactivated.wav" LogicalName="resources/launcher/secretactivated.wav" />
+    <Resource Include="resources\membership\page\tbc_12months_disabled.png" LogicalName="resources/membership/page/tbc_12months_disabled.png" />
+    <Resource Include="resources\launcher\playthislong.png" LogicalName="resources/launcher/playthislong.png" />
+    <Resource Include="resources\launcher\catalog\limited.png" LogicalName="resources/launcher/catalog/limited.png" />
+    <Resource Include="resources\membership\page\obcicon.png" LogicalName="resources/membership/page/obcicon.png" />
+    <Resource Include="resources\membership\outrageousbuildersclub.png" LogicalName="resources/membership/outrageousbuildersclub.png" />
+    <Resource Include="resources\membership\page\tbc_lifetime.png" LogicalName="resources/membership/page/tbc_lifetime.png" />
+    <Resource Include="resources\membership\none.png" LogicalName="resources/membership/none.png" />
+    <Resource Include="resources\launcher\bullet.png" LogicalName="resources/launcher/bullet.png" />
+    <Resource Include="resources\membership\turbobuildersclub.png" LogicalName="resources/membership/turbobuildersclub.png" />
+    <Resource Include="resources\figures\figure7.png" LogicalName="resources/figures/figure7.png" />
+    <Resource Include="resources\figures\figure8.png" LogicalName="resources/figures/figure8.png" />
+    <Resource Include="resources\figures\figure5.png" LogicalName="resources/figures/figure5.png" />
+    <Resource Include="resources\figures\figure6.png" LogicalName="resources/figures/figure6.png" />
+    <Resource Include="resources\figures\figure3.png" LogicalName="resources/figures/figure3.png" />
+    <Resource Include="resources\figures\figure4.png" LogicalName="resources/figures/figure4.png" />
+    <Resource Include="resources\figures\figure1.png" LogicalName="resources/figures/figure1.png" />
+    <Resource Include="resources\figures\figure2.png" LogicalName="resources/figures/figure2.png" />
+    <Resource Include="resources\membership\page\upgradebuttondisabled.png" LogicalName="resources/membership/page/upgradebuttondisabled.png" />
+    <Resource Include="resources\thumbnails\customitems\tshirt.png" LogicalName="resources/thumbnails/customitems/tshirt.png" />
+    <Resource Include="resources\launcher\theteam\matthead.png" LogicalName="resources/launcher/theteam/matthead.png" />
+    <EmbeddedResource Include="resources\sounds\explosion.ogg" LogicalName="resources/sounds/explosion.ogg" />
+    <Resource Include="resources\cursors\hammerovercursor.cur" LogicalName="resources/cursors/hammerovercursor.cur" />
+    <Resource Include="resources\launcher\hostbutton.png" LogicalName="resources/launcher/hostbutton.png" />
+    <Resource Include="resources\banner.png" LogicalName="resources/banner.png" />
+    <EmbeddedResource Include="resources\sounds\ping.ogg" LogicalName="resources/sounds/ping.ogg" />
+    <Resource Include="resources\membership\page\tbc_lifetime_disabled.png" LogicalName="resources/membership/page/tbc_lifetime_disabled.png" />
+    <Resource Include="resources\membership\page\tbc_monthly_disabled.png" LogicalName="resources/membership/page/tbc_monthly_disabled.png" />
+    <Resource Include="resources\membership\page\obc_monthly.png" LogicalName="resources/membership/page/obc_monthly.png" />
+    <Resource Include="resources\figures\small\figure7.png" LogicalName="resources/figures/small/figure7.png" />
+    <Resource Include="resources\figures\small\figure8.png" LogicalName="resources/figures/small/figure8.png" />
+    <Resource Include="resources\figures\small\figure5.png" LogicalName="resources/figures/small/figure5.png" />
+    <Resource Include="resources\launcher\catalog\limitedunique.png" LogicalName="resources/launcher/catalog/limitedunique.png" />
+    <Resource Include="resources\figures\small\figure6.png" LogicalName="resources/figures/small/figure6.png" />
+    <Resource Include="resources\figures\small\figure3.png" LogicalName="resources/figures/small/figure3.png" />
+    <Resource Include="resources\figures\small\figure4.png" LogicalName="resources/figures/small/figure4.png" />
+    <Resource Include="resources\figures\small\figure1.png" LogicalName="resources/figures/small/figure1.png" />
+    <Resource Include="resources\figures\small\figure2.png" LogicalName="resources/figures/small/figure2.png" />
+    <Resource Include="resources\ads\vertical\7.jpg" LogicalName="resources/ads/vertical/7.jpg" />
+    <Resource Include="resources\ads\vertical\5.jpg" LogicalName="resources/ads/vertical/5.jpg" />
+    <Resource Include="resources\ads\vertical\6.jpg" LogicalName="resources/ads/vertical/6.jpg" />
+    <Resource Include="resources\ads\vertical\3.jpg" LogicalName="resources/ads/vertical/3.jpg" />
+    <Resource Include="resources\ads\vertical\4.jpg" LogicalName="resources/ads/vertical/4.jpg" />
+    <Resource Include="resources\ads\vertical\1.jpg" LogicalName="resources/ads/vertical/1.jpg" />
+    <Resource Include="resources\ads\vertical\2.jpg" LogicalName="resources/ads/vertical/2.jpg" />
+    <Resource Include="resources\ads\vertical\9.jpg" LogicalName="resources/ads/vertical/9.jpg" />
+    <Resource Include="resources\ads\vertical\8.jpg" LogicalName="resources/ads/vertical/8.jpg" />
+    <Resource Include="resources\launcher\hostbuttonpressed.png" LogicalName="resources/launcher/hostbuttonpressed.png" />
+    <Resource Include="resources\membership\buildersclub.png" LogicalName="resources/membership/buildersclub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
+    <PackageReference Include="NAudio" Version="2.2.1" />
+    <PackageReference Include="NAudio.Vorbis" Version="1.5.0" />
+    <PackageReference Include="NAudio.WinForms" Version="2.2.1" />
+    <PackageReference Include="XamlAnimatedGif" Version="2.3.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OnlyRetroRobloxHere.Common\OnlyRetroRobloxHere.Common.csproj" />
+    <ProjectReference Include="..\OnlyRetroRobloxHere.ServerAuthInterface\OnlyRetroRobloxHere.ServerAuthInterface.csproj" />
+    <ProjectReference Include="..\OnlyRetroRobloxHere.WebServer\OnlyRetroRobloxHere.WebServer.csproj" />
+    <ProjectReference Include="..\Wpf.XP\Wpf.XP.csproj" />
+  </ItemGroup>
+</Project>
