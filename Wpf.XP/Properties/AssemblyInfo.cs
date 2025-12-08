@@ -6,7 +6,7 @@ using System.Windows;
 
 [assembly: ThemeInfo(ResourceDictionaryLocation.None, ResourceDictionaryLocation.SourceAssembly)]
 [assembly: AssemblyCompany("Wpf.XP")]
-[assembly: AssemblyConfiguration("Release")]
+[assembly: AssemblyConfiguration("")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 [assembly: AssemblyInformationalVersion("1.0.0")]
 [assembly: AssemblyProduct("Wpf.XP")]

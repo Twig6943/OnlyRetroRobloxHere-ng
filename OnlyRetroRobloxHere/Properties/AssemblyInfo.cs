@@ -6,9 +6,8 @@ using System.Windows;
 using OnlyRetroRobloxHere.Launcher.Models.Attributes;
 
 [assembly: ThemeInfo(ResourceDictionaryLocation.None, ResourceDictionaryLocation.SourceAssembly)]
-[assembly: BuildMetadata("2024-12-21T20:37:46Z")]
 [assembly: AssemblyCompany("Only Retro Roblox Here")]
-[assembly: AssemblyConfiguration("Release")]
+[assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCopyright("Copyright (C) Only Retro Roblox Here 2024")]
 [assembly: AssemblyDescription("Launcher for ORRH clients")]
 [assembly: AssemblyFileVersion("1.2.0.1")]

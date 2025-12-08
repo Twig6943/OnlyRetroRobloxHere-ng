@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.Versioning;
 
 [assembly: AssemblyCompany("OnlyRetroRobloxHere.WebServer")]
-[assembly: AssemblyConfiguration("Release")]
+[assembly: AssemblyConfiguration("")]
 [assembly: AssemblyFileVersion("1.2.0.0")]
 [assembly: AssemblyInformationalVersion("1.2.0.0")]
 [assembly: AssemblyProduct("OnlyRetroRobloxHere.WebServer")]

@@ -349,4 +349,9 @@
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="xcopy /Y /S &quot;$(SolutionDir)OnlyRetroRobloxHere.WebServer\bin\$(ConfigurationName)\netcoreapp6.0\*.*&quot; &quot;$(TargetDir)&quot;&#xA;xcopy /Y /S &quot;$(SolutionDir)OnlyRetroRobloxHere.ServerAuthInterface\bin\$(ConfigurationName)\netcoreapp6.0\*.*&quot; &quot;$(TargetDir)&quot;" />
   </Target>
+  <Target Name="CustomPreBuildClean" BeforeTargets="Clean">
+	<Message Text="custom cleanup for files copied in files" Importance="high" />
+	<Exec Command="del /q &quot;$(TargetDir)*.*&quot;" Condition="Exists('$(TargetDir)')" />
+	<Exec Command="for /d %%x in (&quot;$(TargetDir)*&quot;) do @rd /s /q &quot;%%x&quot;" Condition="Exists('$(TargetDir)')" />
+   </Target>
 </Project>
