@@ -344,8 +344,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OnlyRetroRobloxHere.Common\OnlyRetroRobloxHere.Common.csproj" />
-    <ProjectReference Include="..\OnlyRetroRobloxHere.ServerAuthInterface\OnlyRetroRobloxHere.ServerAuthInterface.csproj" />
-    <ProjectReference Include="..\OnlyRetroRobloxHere.WebServer\OnlyRetroRobloxHere.WebServer.csproj" />
     <ProjectReference Include="..\Wpf.XP\Wpf.XP.csproj" />
   </ItemGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /Y /S &quot;$(SolutionDir)OnlyRetroRobloxHere.WebServer\bin\$(ConfigurationName)\netcoreapp6.0\*.*&quot; &quot;$(TargetDir)&quot;&#xA;xcopy /Y /S &quot;$(SolutionDir)OnlyRetroRobloxHere.ServerAuthInterface\bin\$(ConfigurationName)\netcoreapp6.0\*.*&quot; &quot;$(TargetDir)&quot;" />
+  </Target>
 </Project>
