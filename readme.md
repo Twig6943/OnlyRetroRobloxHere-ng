@@ -3,7 +3,6 @@ This decompilation is pretty much in a functional and working place, but its not
 
 ## Issues
 So there are a few issues or things to look into to make it more stable and here are the ones in specific:
-- The webserver had dependency issues but they should be fixed. It may or may not still crash on WINE.
 - There might be some issues with the clients themselves occasioanlly but its not really sure why, such as the 2011E ui having some minor issues, but othertimes when the binaries from this decomp are copied over it seems fine...the clients should just be copied from a vanilla ORRH install as well. It doesnt know if Matt had some internal pipeline to patch the clients automatically and bundle the software with all its data but obviously its something we should look into too.
 - Code is obviously undocumented and has poor error handling in some cases.
 
