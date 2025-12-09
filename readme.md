@@ -1,11 +1,6 @@
 # ORRH Decompilation
 This decompilation is pretty much in a functional and working place, but its not so readable currently due to the fact its basically just been cleaned up and fixed to where it will compile, and run. This one hasnt done any deep dives into how this code really works but it already sees some spots for improvement. The only file not included at the moment or probably into the future is the TTS helper, this was written in something else than C#, likely C++ or rust, probably to integrate with the old TTS software it relies on, and decompiling it will be a difficult task it doesnt really see as worth it for a feature which doesn't work all that well or is really wanted, so you might as well make it from scratch anyway. Besides this, the files will compile to something at least 99% functional with real ORRH, it has tried it and all the functions here work properly.
 
-## Issues
-So there are a few issues or things to look into to make it more stable and here are the ones in specific:
-- There might be some issues with the clients themselves occasioanlly but its not really sure why, such as the 2011E ui having some minor issues, but othertimes when the binaries from this decomp are copied over it seems fine...the clients should just be copied from a vanilla ORRH install as well. It doesnt know if Matt had some internal pipeline to patch the clients automatically and bundle the software with all its data but obviously its something we should look into too.
-- Code is obviously undocumented and has poor error handling in some cases.
-
 ## Building
 Thanks to dotnet this project doesnt require any particular special setup, you should be able to clone the repository with git and open it in Visual Studio 2022, as long as you have the dotnet 6.0 SDK installed and ASP.NET SDK you will be able to simply just build, the dependencies should be pulled automatically by nuget. The launcher project is OnlyRetroRobloxHere when you build this all the files will be placed in the bin folder.
 
