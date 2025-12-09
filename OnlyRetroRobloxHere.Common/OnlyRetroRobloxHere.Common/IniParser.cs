@@ -4,6 +4,15 @@ using System.Reflection;
 
 namespace OnlyRetroRobloxHere.Common;
 
+/// <summary>
+/// Provides methods for parsing INI-formatted strings into objects of a specified type.
+/// </summary>
+/// <remarks>
+/// The <see cref="IniParser"/> class supports parsing INI-formatted strings into objects with string
+/// properties. Each line in the INI string should be in the format "Key=Value", where "Key" corresponds to the name of
+/// a property in the target type, and "Value" is the value to assign to that property. Non-string properties aren't
+/// supported.
+/// </remarks>
 public static class IniParser
 {
 	private static string[] _newLineDelimiters = new string[3] { "\r\n", "\r", "\n" };

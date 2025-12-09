@@ -3,6 +3,9 @@ using System.Text.Json.Serialization;
 
 namespace OnlyRetroRobloxHere.Common.Enums;
 
+/// <summary>
+/// Represents the slot for an avatar asset in Roblox.
+/// </summary>
 [JsonConverter(typeof(JsonStringEnumConverter))]
 public enum AvatarSlot
 {

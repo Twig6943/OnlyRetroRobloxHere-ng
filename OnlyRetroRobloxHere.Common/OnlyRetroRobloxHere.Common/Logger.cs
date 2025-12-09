@@ -6,6 +6,13 @@ using OnlyRetroRobloxHere.Common.Enums;
 
 namespace OnlyRetroRobloxHere.Common;
 
+/// <summary>
+///	Logger class for logging messages to a file and console.
+/// </summary>
+/// <remarks>
+/// Used through the entire app, logs messages to a file created with a generated name based on the assembly name and current UTC time. 
+/// The log types of "Verbose" and "Debug" dont seem to be used.
+/// </remarks>
 public class Logger
 {
 	public static readonly Logger Instance;
@@ -16,7 +23,7 @@ public class Logger
 
 	private static string ConstructLogFileName()
 	{
-		return (Assembly.GetEntryAssembly()?.GetName().Name ?? "Unknown") + "_" + DateTime.UtcNow.ToString("O").Replace("-", "").Replace(":", "")
+        return (Assembly.GetEntryAssembly()?.GetName().Name ?? "Unknown") + "_" + DateTime.UtcNow.ToString("O").Replace("-", "").Replace(":", "")
 			.Replace(".", "") + ".log";
 	}
 

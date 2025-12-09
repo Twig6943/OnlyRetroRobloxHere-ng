@@ -8,6 +8,9 @@ using OnlyRetroRobloxHere.Common.Models;
 
 namespace OnlyRetroRobloxHere.Common;
 
+/// <summary>
+/// Manages the lifecycle, state, and configuration of asset packs within the application.
+/// </summary>
 public class AssetPackManager
 {
 	private ClientYear? _clientYear;
