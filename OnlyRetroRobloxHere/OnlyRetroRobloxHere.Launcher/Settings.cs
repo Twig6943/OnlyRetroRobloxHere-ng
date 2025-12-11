@@ -35,7 +35,9 @@ internal class Settings
 
 		public bool EggHuntMode { get; set; }
 
-		public bool AutoSaveDebug { get; set; }
+        public bool HackCustomHats { get; set; }
+
+        public bool AutoSaveDebug { get; set; }
 
 		public uint AutoSaveChangesPerPlayer { get; set; } = 100u;
 

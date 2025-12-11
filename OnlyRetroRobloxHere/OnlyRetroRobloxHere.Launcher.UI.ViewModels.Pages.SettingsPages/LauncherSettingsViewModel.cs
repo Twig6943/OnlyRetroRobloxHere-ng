@@ -64,4 +64,19 @@ internal class LauncherSettingsViewModel : ViewModelBase
 			}
 		}
 	}
+    public bool HackCustomHats
+    {
+        get
+        {
+            return Settings.Default.Launch.HackCustomHats;
+        }
+        set
+        {
+            if (Settings.Default.Launch.HackCustomHats != value)
+            {
+                Settings.Default.Launch.HackCustomHats = value;
+                OnPropertyChanged("HackCustomHats");
+            }
+        }
+    }
 }
