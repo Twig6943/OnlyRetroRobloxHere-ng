@@ -61,8 +61,16 @@ internal static class UrlConstructor
 			ulong value = item.Value;
 			if (CharacterCompatibility.IsCompatible(key))
 			{
-				int value2 = AvatarItems.GetById(value)?.AssetVersion ?? 0;
-				text += $"http://www.roblox.com/asset/?id={value}&version={value2};";
+				if (Config.Instance.User.Launch.HackCustomHats == true)
+				{
+					AvatarItems.GetById(value);
+					text += $"http://www.roblox.com/asset/?id={value};";
+				}
+				else
+				{
+					int value2 = AvatarItems.GetById(value)?.AssetVersion ?? 0;
+					text += $"http://www.roblox.com/asset/?id={value}&version={value2};";
+				}
 			}
 		}
 		if (!Config.Instance.Client.CharacterCompatibility.FigureBodyColours)

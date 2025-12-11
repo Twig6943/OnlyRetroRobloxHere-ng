@@ -33,16 +33,34 @@ public class CharacterFetchController : ControllerBase
 		{
 			return Ok();
 		}
-		string json = System.IO.File.ReadAllText(path);
-		CharacterFetchData characterFetchData = JsonSerializer.Deserialize<CharacterFetchData>(json) ?? throw new Exception($"Failed to deserialise CharacterFetchData for {userId}");
-		BodyColorData bodyColors = characterFetchData.BodyColors;
-		string text = "";
-		text += $"http://www.roblox.com/asset/bodycolorslist.ashx?colors={HttpUtility.UrlEncode($"{bodyColors.Head},{bodyColors.LeftArm},{bodyColors.RightArm},{bodyColors.LeftLeg},{bodyColors.RightLeg},{bodyColors.Torso}")}";
-		foreach (ulong asset in characterFetchData.Assets)
+		if (Config.Instance.User.Launch.HackCustomHats == true)
 		{
-			int value = AvatarItems.GetById(asset)?.AssetVersion ?? 0;
-			text += $";http://www.roblox.com/asset/?id={asset}&version={value}";
+			CharacterFetchData? obj = JsonSerializer.Deserialize<CharacterFetchData>(System.IO.File.ReadAllText(path)) ?? throw new Exception($"Failed to deserialise CharacterFetchData for {userId}");
+			BodyColorData bodyColors = obj.BodyColors;
+			string text = "";
+			string text2 = text;
+			string format = "http://www.roblox.com/asset/bodycolorslist.ashx?colors={0}";
+			text = text2 + string.Format(format, HttpUtility.UrlEncode($"{bodyColors.Head},{bodyColors.LeftArm},{bodyColors.RightArm},{bodyColors.LeftLeg},{bodyColors.RightLeg},{bodyColors.Torso}"));
+			foreach (ulong asset in obj.Assets)
+			{
+				_ = AvatarItems.GetById(asset)?.AssetVersion;
+				text += $";http://www.roblox.com/asset/?id={asset}";
+			}
+            return Ok(text);
+        }
+		else
+		{
+			string json = System.IO.File.ReadAllText(path);
+			CharacterFetchData characterFetchData = JsonSerializer.Deserialize<CharacterFetchData>(json) ?? throw new Exception($"Failed to deserialise CharacterFetchData for {userId}");
+			BodyColorData bodyColors = characterFetchData.BodyColors;
+			string text = "";
+			text += $"http://www.roblox.com/asset/bodycolorslist.ashx?colors={HttpUtility.UrlEncode($"{bodyColors.Head},{bodyColors.LeftArm},{bodyColors.RightArm},{bodyColors.LeftLeg},{bodyColors.RightLeg},{bodyColors.Torso}")}";
+			foreach (ulong asset in characterFetchData.Assets)
+			{
+				int value = AvatarItems.GetById(asset)?.AssetVersion ?? 0;
+				text += $";http://www.roblox.com/asset/?id={asset}&version={value}";
+			}
+			return Ok(text);
 		}
-		return Ok(text);
 	}
 }

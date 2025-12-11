@@ -60,7 +60,9 @@ internal class Config
 
 			public bool AutoSaveEnabled { get; set; }
 
-			public bool ExperimentalPlayerlistEnabled { get; set; }
+			public bool HackCustomHats { get; set; }
+
+            public bool ExperimentalPlayerlistEnabled { get; set; }
 
 			public bool EggHuntMode { get; set; }
 

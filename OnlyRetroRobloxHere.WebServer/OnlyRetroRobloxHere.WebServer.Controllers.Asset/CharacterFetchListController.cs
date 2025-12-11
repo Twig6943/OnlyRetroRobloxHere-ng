@@ -36,32 +36,59 @@ public class CharacterFetchListController : ControllerBase
 		string text = "";
 		List<ulong> list = new List<ulong>();
 		string[] array = items.Split(',');
-		foreach (string s in array)
+		if (Config.Instance.User.Launch.HackCustomHats == true)
 		{
-			if (ulong.TryParse(s, out var result))
+			for (int i = 0; i < array.Length; i++)
 			{
-				list.Add(result);
-			}
-		}
-		IEnumerable<ulong> enumerable = AvatarAuthoriser.FilterUnsafeAssets(list);
-		foreach (ulong item in enumerable)
-		{
-			bool flag = false;
-			AvatarItem byId = AvatarItems.GetById(item);
-			int value;
-			if (byId != null)
-			{
-				value = byId.AssetVersion;
-				if (byId.Type == AvatarAssetType.Gear)
+				if (ulong.TryParse(array[i], out var result))
 				{
-					flag = true;
+					list.Add(result);
 				}
 			}
-			else
+			foreach (ulong item in AvatarAuthoriser.FilterUnsafeAssets(list))
 			{
-				value = 0;
+				bool flag = false;
+				AvatarItem byId = AvatarItems.GetById(item);
+				if (byId != null)
+				{
+					_ = byId.AssetVersion;
+					if (byId.Type == AvatarAssetType.Gear)
+					{
+						flag = true;
+					}
+				}
+				text += $"http://www.roblox.com/asset/?id={item}{(flag ? "&equipped=1" : "")};";
 			}
-			text += $"http://www.roblox.com/asset/?id={item}&version={value}{(flag ? "&equipped=1" : "")};";
+		}
+		else
+		{
+			foreach (string s in array)
+			{
+				if (ulong.TryParse(s, out var result))
+				{
+					list.Add(result);
+				}
+			}
+			IEnumerable<ulong> enumerable = AvatarAuthoriser.FilterUnsafeAssets(list);
+			foreach (ulong item in enumerable)
+			{
+				bool flag = false;
+				AvatarItem byId = AvatarItems.GetById(item);
+				int value;
+				if (byId != null)
+				{
+					value = byId.AssetVersion;
+					if (byId.Type == AvatarAssetType.Gear)
+					{
+						flag = true;
+					}
+				}
+				else
+				{
+					value = 0;
+				}
+				text += $"http://www.roblox.com/asset/?id={item}&version={value}{(flag ? "&equipped=1" : "")};";
+			}
 		}
 		if (!string.IsNullOrEmpty(colors))
 		{
