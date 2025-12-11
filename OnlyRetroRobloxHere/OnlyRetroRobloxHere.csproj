@@ -187,7 +187,7 @@
     <Resource Include="resources\ads\vertical\54.jpg" LogicalName="resources/ads/vertical/54.jpg" />
     <Resource Include="resources\ads\vertical\59.jpg" LogicalName="resources/ads/vertical/59.jpg" />
     <Resource Include="resources\ads\vertical\58.jpg" LogicalName="resources/ads/vertical/58.jpg" />
-    <EmbeddedResource Include="resources\launcher\progressindicator.gif" LogicalName="resources/launcher/progressindicator.gif" />
+    <Resource Include="resources\launcher\progressindicator.gif" LogicalName="resources/launcher/progressindicator.gif" />
     <Resource Include="resources\ads\vertical\61.jpg" LogicalName="resources/ads/vertical/61.jpg" />
     <Resource Include="resources\ads\vertical\63.jpg" LogicalName="resources/ads/vertical/63.jpg" />
     <Resource Include="resources\ads\vertical\60.jpg" LogicalName="resources/ads/vertical/60.jpg" />
@@ -244,13 +244,13 @@
     <Resource Include="resources\snowfall\snowflake3.png" LogicalName="resources/snowfall/snowflake3.png" />
     <Resource Include="resources\snowfall\snowflake2.png" LogicalName="resources/snowfall/snowflake2.png" />
     <Resource Include="resources\snowfall\snowflake1.png" LogicalName="resources/snowfall/snowflake1.png" />
-    <EmbeddedResource Include="resources\sounds\songs\rock.ogg" LogicalName="resources/sounds/songs/rock.ogg" />
+    <Resource Include="resources\sounds\songs\rock.ogg" LogicalName="resources/sounds/songs/rock.ogg" />
     <Resource Include="resources\ads\bc\2.jpg" LogicalName="resources/ads/bc/2.jpg" />
     <Resource Include="resources\ads\bc\1.jpg" LogicalName="resources/ads/bc/1.jpg" />
     <Resource Include="resources\ads\bc\3.jpg" LogicalName="resources/ads/bc/3.jpg" />
     <Resource Include="resources\membership\page\upgradebutton.png" LogicalName="resources/membership/page/upgradebutton.png" />
     <Resource Include="resources\thumbnails\customitems\pants.png" LogicalName="resources/thumbnails/customitems/pants.png" />
-    <EmbeddedResource Include="resources\sounds\songs\funk.ogg" LogicalName="resources/sounds/songs/funk.ogg" />
+    <Resource Include="resources\sounds\songs\funk.ogg" LogicalName="resources/sounds/songs/funk.ogg" />
     <Resource Include="resources\membership\page\bc_monthly_disabled.png" LogicalName="resources/membership/page/bc_monthly_disabled.png" />
     <Resource Include="resources\membership\page\bc_12months.png" LogicalName="resources/membership/page/bc_12months.png" />
     <Resource Include="resources\membership\page\tbc_6months_disabled.png" LogicalName="resources/membership/page/tbc_6months_disabled.png" />
@@ -261,9 +261,9 @@
     <Resource Include="resources\socials\discord\discord-mark-white.png" LogicalName="resources/socials/discord/discord-mark-white.png" />
     <Resource Include="resources\launcher\warning.png" LogicalName="resources/launcher/warning.png" />
     <Resource Include="resources\launcher\help.png" LogicalName="resources/launcher/help.png" />
-    <EmbeddedResource Include="resources\sounds\songs\jazz.ogg" LogicalName="resources/sounds/songs/jazz.ogg" />
+    <Resource Include="resources\sounds\songs\jazz.ogg" LogicalName="resources/sounds/songs/jazz.ogg" />
     <Resource Include="resources\thumbnails\default.png" LogicalName="resources/thumbnails/default.png" />
-    <EmbeddedResource Include="resources\launcher\pageturn.wav" LogicalName="resources/launcher/pageturn.wav" />
+    <Resource Include="resources\launcher\pageturn.wav" LogicalName="resources/launcher/pageturn.wav" />
     <Resource Include="resources\robloxicons\roblox2007.ico" LogicalName="resources/robloxicons/roblox2007.ico" />
     <Resource Include="resources\membership\page\tbc_monthly.png" LogicalName="resources/membership/page/tbc_monthly.png" />
     <Resource Include="resources\launcher\secrets\boombox.png" LogicalName="resources/launcher/secrets/boombox.png" />
@@ -279,13 +279,13 @@
     <Resource Include="resources\membership\page\bc_monthly.png" LogicalName="resources/membership/page/bc_monthly.png" />
     <Resource Include="resources\membership\page\tbc_6months.png" LogicalName="resources/membership/page/tbc_6months.png" />
     <Resource Include="resources\membership\page\bc_12months_disabled.png" LogicalName="resources/membership/page/bc_12months_disabled.png" />
-    <EmbeddedResource Include="resources\sounds\songs\electronic.ogg" LogicalName="resources/sounds/songs/electronic.ogg" />
+    <Resource Include="resources\sounds\songs\electronic.ogg" LogicalName="resources/sounds/songs/electronic.ogg" />
     <Resource Include="resources\launcher\playslideshowplaceholderimage.jpg" LogicalName="resources/launcher/playslideshowplaceholderimage.jpg" />
-    <EmbeddedResource Include="resources\sounds\cashregister.ogg" LogicalName="resources/sounds/cashregister.ogg" />
+    <Resource Include="resources\sounds\cashregister.ogg" LogicalName="resources/sounds/cashregister.ogg" />
     <Resource Include="resources\membership\page\bc_6months_disabled.png" LogicalName="resources/membership/page/bc_6months_disabled.png" />
     <Resource Include="resources\cursors\hammercursor.cur" LogicalName="resources/cursors/hammercursor.cur" />
     <Resource Include="resources\membership\page\bc_lifetime.png" LogicalName="resources/membership/page/bc_lifetime.png" />
-    <EmbeddedResource Include="resources\launcher\secretactivated.wav" LogicalName="resources/launcher/secretactivated.wav" />
+    <Resource Include="resources\launcher\secretactivated.wav" LogicalName="resources/launcher/secretactivated.wav" />
     <Resource Include="resources\membership\page\tbc_12months_disabled.png" LogicalName="resources/membership/page/tbc_12months_disabled.png" />
     <Resource Include="resources\launcher\playthislong.png" LogicalName="resources/launcher/playthislong.png" />
     <Resource Include="resources\launcher\catalog\limited.png" LogicalName="resources/launcher/catalog/limited.png" />
@@ -306,11 +306,11 @@
     <Resource Include="resources\membership\page\upgradebuttondisabled.png" LogicalName="resources/membership/page/upgradebuttondisabled.png" />
     <Resource Include="resources\thumbnails\customitems\tshirt.png" LogicalName="resources/thumbnails/customitems/tshirt.png" />
     <Resource Include="resources\launcher\theteam\matthead.png" LogicalName="resources/launcher/theteam/matthead.png" />
-    <EmbeddedResource Include="resources\sounds\explosion.ogg" LogicalName="resources/sounds/explosion.ogg" />
+    <Resource Include="resources\sounds\explosion.ogg" LogicalName="resources/sounds/explosion.ogg" />
     <Resource Include="resources\cursors\hammerovercursor.cur" LogicalName="resources/cursors/hammerovercursor.cur" />
     <Resource Include="resources\launcher\hostbutton.png" LogicalName="resources/launcher/hostbutton.png" />
     <Resource Include="resources\banner.png" LogicalName="resources/banner.png" />
-    <EmbeddedResource Include="resources\sounds\ping.ogg" LogicalName="resources/sounds/ping.ogg" />
+    <Resource Include="resources\sounds\ping.ogg" LogicalName="resources/sounds/ping.ogg" />
     <Resource Include="resources\membership\page\tbc_lifetime_disabled.png" LogicalName="resources/membership/page/tbc_lifetime_disabled.png" />
     <Resource Include="resources\membership\page\tbc_monthly_disabled.png" LogicalName="resources/membership/page/tbc_monthly_disabled.png" />
     <Resource Include="resources\membership\page\obc_monthly.png" LogicalName="resources/membership/page/obc_monthly.png" />
