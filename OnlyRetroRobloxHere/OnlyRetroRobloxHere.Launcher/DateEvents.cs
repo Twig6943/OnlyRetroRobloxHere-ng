@@ -3,35 +3,33 @@ using System.Net.NetworkInformation;
 
 namespace OnlyRetroRobloxHere.Launcher;
 
+/// <summary>
+/// Class returns booleans for whether certain date-based events are active or not
+/// </summary>
 internal static class DateEvents
 {
-    private const bool WinterOverride = false;
 
-    private const bool AprilFoolsOverride = false;
-
-#if DEBUG
-    public static bool Pride = false;
-    public static bool Winter = true;
-    public static bool Summer = false;
-    public static bool Spring = false;
-    public static bool Fall = false;
-#else
-    public static bool Winter => DateTime.Now.Month == 12;
-    public static bool Summer => DateTime.Now.Month == 7;
-    public static bool Pride => DateTime.Now.Month == 6;
-    public static bool Spring => DateTime.Now.Month == 4;
-    public static bool Fall => DateTime.Now.Month == 9;
-#endif
-
-    public static bool AprilFools
+    /// <summary>
+    /// Internal method to determine if an event is active based on Settings or Date.
+    /// This allows for overriding events via the secret.
+    /// </summary>
+    /// <param name="eventName">The string key to check against Settings, like "winter"</param>
+    /// <param name="dateCondition">The original date-based boolean logic</param>
+    private static bool CheckEvent(string eventName, bool dateCondition)
     {
-        get
+        if (Settings.Default.Launch.SecretEventOverride)
         {
-            if (DateTime.Now.Month == 4)
-            {
-                return DateTime.Now.Day == 1;
-            }
-            return false;
+            return string.Equals(Settings.Default.Launch.SecretEvent, eventName, StringComparison.OrdinalIgnoreCase);
         }
+
+        return dateCondition;
     }
+
+    public static bool Winter => CheckEvent("winter", DateTime.Now.Month == 12);
+    public static bool Summer => CheckEvent("summer", DateTime.Now.Month == 7);
+    public static bool Pride => CheckEvent("pride", DateTime.Now.Month == 6);
+    public static bool Spring => CheckEvent("spring", DateTime.Now.Month == 4);
+    public static bool Fall => CheckEvent("fall", DateTime.Now.Month == 9);
+
+    public static bool AprilFools => CheckEvent("aprilfools", DateTime.Now.Month == 4 && DateTime.Now.Day == 1);
 }

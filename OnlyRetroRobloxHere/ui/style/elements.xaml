@@ -14,6 +14,21 @@
     <Color x:Key="Color.Control.Background">#444444</Color>
     <Color x:Key="Color.Control.Border">#777777</Color>
     <Color x:Key="Color.Control.Hover">#333333</Color>
+    <!-- This should match the color of the buildings on the banner -->
+    <Color x:Key="Color.Accent.Primary">#477594</Color>
+    
+    <!-- Colors for the gradients on the homepage sidebar -->
+    <Color x:Key="Color.Gradient.Top.Stop1">#424A4F</Color>
+    <Color x:Key="Color.Gradient.Top.Stop2">#0A424A4F</Color>
+    <Color x:Key="Color.Gradient.Top.Stop3">#00424A4F</Color>
+    <Color x:Key="Color.Gradient.Bottom.Stop1">#477594</Color>
+    <Color x:Key="Color.Gradient.Bottom.Stop2">#0A477594</Color>
+    <Color x:Key="Color.Gradient.Bottom.Stop3">#00477594</Color>
+    
+    <!-- Colors for the Gradients on boxes -->
+    <Color x:Key="Color.Gradient.Box.Stop1">#16232D</Color>
+    <Color x:Key="Color.Gradient.Box.Stop2">#223746</Color>
+
 
     <SolidColorBrush x:Key="Theme.Text.Primary" Color="{DynamicResource Color.Text.Primary}" />
     <SolidColorBrush x:Key="Theme.Text.Secondary" Color="{DynamicResource Color.Text.Secondary}" />
@@ -22,17 +37,17 @@
     <SolidColorBrush x:Key="Theme.Header" Color="#4D7FA1" />
 
     <SolidColorBrush x:Key="Theme.Background.Dark" Color="{DynamicResource Color.Background.Dark}" />
+    <SolidColorBrush x:Key="Theme.Background" Color="#424A4F" />
     <SolidColorBrush x:Key="Theme.Control.Background" Color="{DynamicResource Color.Control.Background}" />
     <SolidColorBrush x:Key="Theme.Control.Hover" Color="{DynamicResource Color.Control.Hover}" />
    
     <SolidColorBrush x:Key="Theme.Control.Border" Color="{DynamicResource Color.Control.Border}" />
     <SolidColorBrush x:Key="Theme.Border.Highlight" Color="#FFFFFFFF" />
 
-    <SolidColorBrush x:Key="Theme.Accent.Primary" Color="#477594" />
+    <SolidColorBrush x:Key="Theme.Accent.Primary" Color="{DynamicResource Color.Accent.Primary}" />
 
     <SolidColorBrush x:Key="Theme.Accent.Secondary" Color="#6E99C9" />
-
-
+    <SolidColorBrush x:Key="Theme.Accent.Highlight" Color="#AFCDE0" />
 
     <LinearGradientBrush x:Key="Theme.Gradient.Fade" StartPoint="0,0" EndPoint="1,0">
         <GradientStop Offset="0.0" Color="White" />
@@ -40,11 +55,11 @@
     </LinearGradientBrush>
 
     <LinearGradientBrush x:Key="Theme.Gradient.Box" StartPoint="0,0" EndPoint="0,1">
-        <GradientStop Offset="0.1" Color="#16232D" />
-        <GradientStop Offset="1" Color="#223746" />
+        <GradientStop Offset="0.1" Color="{DynamicResource Color.Gradient.Box.Stop1}" />
+        <GradientStop Offset="1" Color="{DynamicResource Color.Gradient.Box.Stop2}" />
     </LinearGradientBrush>
 
-
+    <SolidColorBrush x:Key="ItemPageBox" Color="{DynamicResource Color.Gradient.Box.Stop1}" />
     <SolidColorBrush x:Key="ItemImageBackground" Color="White" />
     <SolidColorBrush x:Key="LinkColour" Color="{DynamicResource Color.Text.Secondary}" />
 

@@ -26,7 +26,7 @@ public partial class AboutPage : BasePage, IComponentConnector
 
 	private void OnGithubIconClicked(object sender, RoutedEventArgs e)
 	{
-		Utils.OpenUrl("https://github.com/OnlyRetroRobloxHere");
+		Utils.OpenUrl("https://github.com/soundseraph/OnlyRetroRobloxHere-ng");
 	}
 
 	private void OnDiscordIconClicked(object sender, RoutedEventArgs e)

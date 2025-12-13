@@ -190,14 +190,79 @@ internal static class Utils
 
             if (DateEvents.Winter)
             {
-                SetColor(resources, "Color.Background.Dark", Colors.Black);
+                SetSolidBrush(resources, "Theme.Background", System.Windows.Media.Color.FromRgb(23, 32, 86));
+                SetColor(resources, "Color.Gradient.Bottom.Stop1", System.Windows.Media.Color.FromRgb(34, 49, 130));
+                SetColor(resources, "Color.Gradient.Bottom.Stop2", System.Windows.Media.Color.FromArgb(10, 34, 49, 130));
+                SetColor(resources, "Color.Gradient.Bottom.Stop3", System.Windows.Media.Color.FromArgb(0, 34, 49, 130));
+                SetColor(resources, "Color.Gradient.Top.Stop1", System.Windows.Media.Color.FromRgb(23, 32, 86));
+                SetColor(resources, "Color.Gradient.Top.Stop2", System.Windows.Media.Color.FromArgb(10, 23, 32, 86));
+                SetColor(resources, "Color.Gradient.Top.Stop3", System.Windows.Media.Color.FromArgb(0, 23, 32, 86));
                 SetColor(resources, "Color.Control.Background", System.Windows.Media.Color.FromRgb(50, 60, 80));
                 SetColor(resources, "Color.Control.Border", System.Windows.Media.Color.FromRgb(100, 120, 140));
                 SetColor(resources, "Color.Control.Hover", System.Windows.Media.Color.FromRgb(70, 90, 110));
-                SetSolidBrush(resources, "Theme.Accent.Primary", System.Windows.Media.Color.FromRgb(70, 117, 148));
-                SetSolidBrush(resources, "Theme.Accent.Secondary", System.Windows.Media.Color.FromRgb(110, 153, 201));
-                SetColor(resources, "Color.Text.Primary", System.Windows.Media.Colors.White);
+                SetColor(resources, "Color.Accent.Primary", System.Windows.Media.Color.FromRgb(34, 49, 130));
+                SetSolidBrush(resources, "Theme.Header", System.Windows.Media.Color.FromRgb(0, 6, 80));
+                SetSolidBrush(resources, "Theme.Accent.Secondary", System.Windows.Media.Color.FromRgb(110, 153, 201));
                 SetColor(resources, "Color.Text.Secondary", System.Windows.Media.Color.FromRgb(200, 220, 255));
+                SetColor(resources, "Color.Gradient.Box.Stop1", System.Windows.Media.Color.FromRgb(3, 21, 96));
+                SetColor(resources, "Color.Gradient.Box.Stop2", System.Windows.Media.Color.FromRgb(24, 31, 109));
+            }
+            if (DateEvents.Summer)
+            {
+                SetColor(resources, "Color.Accent.Primary", System.Windows.Media.Color.FromRgb(148, 71, 121));
+                SetColor(resources, "Color.Gradient.Bottom.Stop1", System.Windows.Media.Color.FromRgb(148, 71, 121));
+                SetColor(resources, "Color.Gradient.Bottom.Stop2", System.Windows.Media.Color.FromArgb(10, 148, 71, 121));
+                SetColor(resources, "Color.Gradient.Bottom.Stop3", System.Windows.Media.Color.FromArgb(0, 148, 71, 121));
+                SetColor(resources, "Color.Gradient.Top.Stop1", System.Windows.Media.Color.FromRgb(79, 66, 75));
+                SetColor(resources, "Color.Gradient.Top.Stop2", System.Windows.Media.Color.FromArgb(10, 79, 66, 75));
+                SetColor(resources, "Color.Gradient.Top.Stop3", System.Windows.Media.Color.FromArgb(0, 79, 66, 75));
+                SetSolidBrush(resources, "Theme.Background", System.Windows.Media.Color.FromRgb(79, 66, 75));
+                SetSolidBrush(resources, "Theme.Header", System.Windows.Media.Color.FromRgb(180, 101, 151));
+                SetColor(resources, "Color.Gradient.Box.Stop1", System.Windows.Media.Color.FromRgb(34, 17, 28));
+                SetColor(resources, "Color.Gradient.Box.Stop2", System.Windows.Media.Color.FromRgb(97, 34, 55));
+                SetColor(resources, "Color.Control.Background", System.Windows.Media.Color.FromRgb(91, 45, 57));
+                SetColor(resources, "Color.Control.Hover", System.Windows.Media.Color.FromRgb(79, 59, 71));
+                SetSolidBrush(resources, "Theme.Accent.Secondary", System.Windows.Media.Color.FromRgb(180, 101, 151));
+                SetSolidBrush(resources, "Theme.Link", System.Windows.Media.Color.FromRgb(204, 122, 173));
+                SetSolidBrush(resources, "Theme.Accent.Highlight", System.Windows.Media.Color.FromRgb(204, 122, 173));
+            }
+            if (DateEvents.Spring)
+            {
+                SetColor(resources, "Color.Accent.Primary", System.Windows.Media.Color.FromRgb(72, 148, 71));
+                SetColor(resources, "Color.Gradient.Bottom.Stop1", System.Windows.Media.Color.FromRgb(72, 148, 71));
+                SetColor(resources, "Color.Gradient.Bottom.Stop2", System.Windows.Media.Color.FromArgb(10, 72, 148, 71));
+                SetColor(resources, "Color.Gradient.Bottom.Stop3", System.Windows.Media.Color.FromArgb(0, 72, 148, 71));
+                SetColor(resources, "Color.Gradient.Top.Stop1", System.Windows.Media.Color.FromRgb(66, 79, 66));
+                SetColor(resources, "Color.Gradient.Top.Stop2", System.Windows.Media.Color.FromArgb(10, 66, 79, 66));
+                SetColor(resources, "Color.Gradient.Top.Stop3", System.Windows.Media.Color.FromArgb(0, 66, 79, 66));
+                SetSolidBrush(resources, "Theme.Background", System.Windows.Media.Color.FromRgb(66, 79, 66));
+                SetSolidBrush(resources, "Theme.Header", System.Windows.Media.Color.FromRgb(0, 146, 104));
+                SetColor(resources, "Color.Gradient.Box.Stop1", System.Windows.Media.Color.FromRgb(0, 48, 0));
+                SetColor(resources, "Color.Gradient.Box.Stop2", System.Windows.Media.Color.FromRgb(23, 71, 25));
+                SetColor(resources, "Color.Control.Background", System.Windows.Media.Color.FromRgb(38, 85, 38));
+                SetColor(resources, "Color.Control.Hover", System.Windows.Media.Color.FromRgb(59, 87, 59));
+                SetSolidBrush(resources, "Theme.Accent.Secondary", System.Windows.Media.Color.FromRgb(72, 148, 71));
+                SetSolidBrush(resources, "Theme.Link", System.Windows.Media.Color.FromRgb(120, 153, 116));
+                SetSolidBrush(resources, "Theme.Accent.Highlight", System.Windows.Media.Color.FromRgb(120, 153, 116));
+            }
+            if (DateEvents.Fall)
+            {
+                SetColor(resources, "Color.Accent.Primary", System.Windows.Media.Color.FromRgb(148, 105, 71));
+                SetColor(resources, "Color.Gradient.Bottom.Stop1", System.Windows.Media.Color.FromRgb(148, 105, 71));
+                SetColor(resources, "Color.Gradient.Bottom.Stop2", System.Windows.Media.Color.FromArgb(10, 148, 105, 71));
+                SetColor(resources, "Color.Gradient.Bottom.Stop3", System.Windows.Media.Color.FromArgb(0, 148, 105, 71));
+                SetColor(resources, "Color.Gradient.Top.Stop1", System.Windows.Media.Color.FromRgb(79, 71, 66));
+                SetColor(resources, "Color.Gradient.Top.Stop2", System.Windows.Media.Color.FromArgb(10, 79, 71, 66));
+                SetColor(resources, "Color.Gradient.Top.Stop3", System.Windows.Media.Color.FromArgb(0, 79, 71, 66));
+                SetSolidBrush(resources, "Theme.Background", System.Windows.Media.Color.FromRgb(79, 71, 66));
+                SetSolidBrush(resources, "Theme.Header", System.Windows.Media.Color.FromRgb(146, 90, 85));
+                SetColor(resources, "Color.Gradient.Box.Stop1", System.Windows.Media.Color.FromRgb(33, 26, 22));
+                SetColor(resources, "Color.Gradient.Box.Stop2", System.Windows.Media.Color.FromRgb(54, 47, 43));
+                SetColor(resources, "Color.Control.Background", System.Windows.Media.Color.FromRgb(83, 68, 57));
+                SetColor(resources, "Color.Control.Hover", System.Windows.Media.Color.FromRgb(134, 60, 0));
+                SetSolidBrush(resources, "Theme.Accent.Secondary", System.Windows.Media.Color.FromRgb(101, 92, 88));
+                SetSolidBrush(resources, "Theme.Link", System.Windows.Media.Color.FromRgb(209, 124, 47));
+                SetSolidBrush(resources, "Theme.Accent.Highlight", System.Windows.Media.Color.FromRgb(209, 124, 47));
             }
         }
 

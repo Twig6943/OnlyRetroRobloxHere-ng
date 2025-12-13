@@ -18,21 +18,13 @@
         <Border Height="10" Margin="0,-1,0,0" UseLayoutRounding="True">
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                    <GradientStop Offset="0" Color="#477594" />
-                    <GradientStop Offset="0.5" Color="#0A477594" />
-                    <GradientStop Offset="1" Color="#00477594" />
+                    <GradientStop Offset="0" Color="{DynamicResource Color.Gradient.Bottom.Stop1}" />
+                    <GradientStop Offset="0.5" Color="{DynamicResource Color.Gradient.Bottom.Stop2}" />
+                    <GradientStop Offset="1" Color="{DynamicResource Color.Gradient.Bottom.Stop3}" />
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
         <TextBlock Margin="0,0,0,5" Style="{StaticResource TextBlockWhite}" TextAlignment="Center" Text="{Binding Path=Version, Converter={StaticResource StringFormatConverter}, ConverterParameter=Version {0}, Mode=OneTime}" />
-        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-            <Button Background="#00FFFFFF" BorderThickness="0" Style="{StaticResource ButtonNoEffects}" Click="OnGithubIconClicked">
-                <Image Width="40" RenderOptions.BitmapScalingMode="HighQuality" Source="pack://application:,,,/OnlyRetroRobloxHere;component/Resources/Socials/Github/github-mark-white.png" />
-            </Button>
-            <Button Margin="10,0,0,0" Background="#00FFFFFF" BorderThickness="0" Style="{StaticResource ButtonNoEffects}" Click="OnDiscordIconClicked">
-                <Image Height="30" RenderOptions.BitmapScalingMode="HighQuality" Source="pack://application:,,,/OnlyRetroRobloxHere;component/Resources/Socials/Discord/discord-mark-white.png" />
-            </Button>
-        </StackPanel>
         <TextBlock FontSize="24" FontWeight="Bold" Style="{StaticResource TextBlockRed}" Text="Distributing private builds of ORRbxH is prohibited." TextAlignment="Center" Visibility="{Binding Path=PrivateVersionWarningVisibility, Mode=OneTime}" />
         <TextBlock FontSize="16" FontWeight="Bold" Style="{StaticResource TextBlockRed}" Text="Debug is enabled." TextAlignment="Center" Visibility="{Binding Path=DebugVersionWarningVisibility, Mode=OneTime}" />
 
@@ -77,7 +69,7 @@
                             <Image Width="120" Height="197" RenderOptions.BitmapScalingMode="HighQuality" Source="pack://application:,,,/OnlyRetroRobloxHere;component/Resources/Launcher/TheTeam/remilia.png" />
                         </StackPanel>
                         <TextBlock Grid.Row="0" Grid.Column="1" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Style="{StaticResource TextBlockWhite}" Text="Remilia" TextWrapping="Wrap" />
-                        <TextBlock Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" FontSize="12" Style="{StaticResource TextBlockWhite}" Text="The one who continued things." TextWrapping="Wrap" />
+                        <TextBlock Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" FontSize="12" Style="{StaticResource TextBlockWhite}" Text="Do you rememeber how many&#x0a;slices of bread you've eaten?" TextWrapping="Wrap" />
                     </Grid>
 
                 </StackPanel>
@@ -102,6 +94,14 @@
                         <TextBlock Margin="0" Style="{StaticResource TextBlockWhite}" Text="{Binding Path=BuildMetadata.Configuration, Converter={StaticResource StringFormatConverter}, ConverterParameter=Configuration: {0}, Mode=OneTime}" />
                     </StackPanel>
                 </controls:StandardBox>
+                <StackPanel HorizontalAlignment="Center"  Orientation="Horizontal">
+                    <Button Background="#00FFFFFF" BorderThickness="0" Style="{StaticResource ButtonNoEffects}" Click="OnGithubIconClicked">
+                        <Image Width="40" RenderOptions.BitmapScalingMode="HighQuality" Source="pack://application:,,,/OnlyRetroRobloxHere;component/Resources/Socials/Github/github-mark-white.png" />
+                    </Button>
+                    <Button Margin="10,0,0,0" Background="#00FFFFFF" BorderThickness="0" Style="{StaticResource ButtonNoEffects}" Click="OnDiscordIconClicked">
+                        <Image Height="30" RenderOptions.BitmapScalingMode="HighQuality" Source="pack://application:,,,/OnlyRetroRobloxHere;component/Resources/Socials/Discord/discord-mark-white.png" />
+                    </Button>
+                </StackPanel>
 
             </StackPanel>
         </Grid>

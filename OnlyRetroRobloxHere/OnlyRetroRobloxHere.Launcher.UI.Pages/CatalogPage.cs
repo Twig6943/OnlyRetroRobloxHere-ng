@@ -100,7 +100,55 @@ public partial class CatalogPage : BasePage, IComponentConnector, IStyleConnecto
 			Sounds.SecretActivated.Play();
 			_viewModel.SearchQuery = "";
 		}
-		else if (!string.IsNullOrEmpty(_viewModel.SearchQuery) && _selectedCategory == (AvatarAssetType)201)
+        if (_viewModel.SearchQuery == "backtothesummerof1999")
+        {
+			Settings.Default.Launch.SecretEventOverride = true;
+			Settings.Default.Launch.SecretEvent = "summer";
+            Sounds.SecretActivated.Play();
+            _viewModel.SearchQuery = "";
+        }
+        if (_viewModel.SearchQuery == "inasnowboundland")
+        {
+			Settings.Default.Launch.SecretEventOverride = true;
+			Settings.Default.Launch.SecretEvent = "winter";
+            Sounds.SecretActivated.Play();
+            _viewModel.SearchQuery = "";
+        }
+        if (_viewModel.SearchQuery == "millionsofgays.killthem")
+        {
+			Settings.Default.Launch.SecretEventOverride = true;
+			Settings.Default.Launch.SecretEvent = "pride";
+            Sounds.SecretActivated.Play();
+            _viewModel.SearchQuery = "";
+        }
+        if (_viewModel.SearchQuery == "flowersandgrass")
+        {
+			Settings.Default.Launch.SecretEventOverride = true;
+			Settings.Default.Launch.SecretEvent = "spring";
+            Sounds.SecretActivated.Play();
+            _viewModel.SearchQuery = "";
+        }
+        if (_viewModel.SearchQuery == "inthedeadofautumn")
+        {
+			Settings.Default.Launch.SecretEventOverride = true;
+			Settings.Default.Launch.SecretEvent = "fall";
+            Sounds.SecretActivated.Play();
+            _viewModel.SearchQuery = "";
+        }
+        if (_viewModel.SearchQuery == "onlyretrothemeshere")
+        {
+			Settings.Default.Launch.SecretEventOverride = true;
+            Settings.Default.Launch.SecretEvent = "none";
+            Sounds.SecretActivated.Play();
+            _viewModel.SearchQuery = "";
+        }
+        if (_viewModel.SearchQuery == "hiddenstarinfourseasons")
+        {
+			Settings.Default.Launch.SecretEventOverride = false;
+            Sounds.SecretActivated.Play();
+            _viewModel.SearchQuery = "";
+        }
+        else if (!string.IsNullOrEmpty(_viewModel.SearchQuery) && _selectedCategory == (AvatarAssetType)201)
 		{
 			OnCategoryClicked(AllCategoryButton, null);
 		}

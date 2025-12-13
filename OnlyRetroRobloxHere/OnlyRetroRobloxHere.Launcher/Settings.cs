@@ -37,6 +37,10 @@ internal class Settings
 
         public bool HackCustomHats { get; set; }
 
+        public string? SecretEvent { get; set; }
+
+		public bool SecretEventOverride { get; set; } = false;
+
         public bool AutoSaveDebug { get; set; }
 
 		public uint AutoSaveChangesPerPlayer { get; set; } = 100u;
