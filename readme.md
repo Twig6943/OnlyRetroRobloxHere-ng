@@ -11,8 +11,9 @@ This project is missing some small, unimportant things to be a full revival of t
 (THIS VERSION HAS NOT YET RELEASED)
 - Now open source flavored!
 - AssetDelivery fixed
-- UGC Patch added as a toggleable option (maybe will become the default in future depending on how things go)
-- 4 New seasonal themes
+- No more missing hats even if you dont put your cookie in the launcher; all the assets are bundled now
+- New items and maps thanks to a built-in asset updater, community submitted
+- 4 new seasonal themes + Updated winter theme
 - Many minor bugs fixed
 - ... Likely more
 ```
