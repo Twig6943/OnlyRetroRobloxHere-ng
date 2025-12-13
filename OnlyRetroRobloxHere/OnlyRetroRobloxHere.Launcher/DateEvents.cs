@@ -10,8 +10,8 @@ internal static class DateEvents
     private const bool AprilFoolsOverride = false;
 
 #if DEBUG
-    public static bool Pride = true;
-    public static bool Winter = false;
+    public static bool Pride = false;
+    public static bool Winter = true;
     public static bool Summer = false;
     public static bool Spring = false;
     public static bool Fall = false;

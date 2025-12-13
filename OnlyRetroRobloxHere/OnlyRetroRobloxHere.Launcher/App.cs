@@ -18,7 +18,8 @@ public partial class App : Application
 		AppDomain.CurrentDomain.UnhandledException += UnhandledExceptionHandler.Handle;
 		Logger.Instance.Info("Only Retro Roblox Here Version: " + Utils.Version);
 		_lock = new InterProcessLock("Launcher", TimeSpan.FromSeconds(1.0));
-		if (!_lock.IsAcquired)
+		Utils.ThemeManager.ApplyTheme();
+        if (!_lock.IsAcquired)
 		{
 			Logger.Instance.Error("ORRH is already running. Quitting.");
 			Utils.ShowMessageBox("Another instance of Only Retro Roblox Here is already running.", MessageBoxButton.OK, MessageBoxImage.Hand);

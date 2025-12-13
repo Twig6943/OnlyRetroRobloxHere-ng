@@ -1,3 +1,5 @@
+using OnlyRetroRobloxHere.Common;
+using OnlyRetroRobloxHere.Launcher.Models.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -12,9 +14,8 @@ using System.Runtime.InteropServices;
 using System.Web;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using OnlyRetroRobloxHere.Common;
-using OnlyRetroRobloxHere.Launcher.Models.Attributes;
 
 namespace OnlyRetroRobloxHere.Launcher;
 
@@ -102,11 +103,11 @@ internal static class Utils
     {
         get
         {
-            #if DEBUG
+#if DEBUG
             return true;
-            #else
+#else
             return false;
-            #endif
+#endif
         }
     }
 
@@ -176,5 +177,57 @@ internal static class Utils
         bitmapImage.EndInit();
         bitmapImage.Freeze();
         return bitmapImage;
+    }
+
+    /// <summary>
+    /// Theme manager to apply seasonal themes to the launcher UI.
+    /// </summary>
+    public static class ThemeManager
+    {
+        public static void ApplyTheme()
+        {
+            var resources = Application.Current.Resources;
+
+            if (DateEvents.Winter)
+            {
+                SetColor(resources, "Color.Background.Dark", Colors.Black);
+                SetColor(resources, "Color.Control.Background", System.Windows.Media.Color.FromRgb(50, 60, 80));
+                SetColor(resources, "Color.Control.Border", System.Windows.Media.Color.FromRgb(100, 120, 140));
+                SetColor(resources, "Color.Control.Hover", System.Windows.Media.Color.FromRgb(70, 90, 110));
+                SetSolidBrush(resources, "Theme.Accent.Primary", System.Windows.Media.Color.FromRgb(70, 117, 148));
+                SetSolidBrush(resources, "Theme.Accent.Secondary", System.Windows.Media.Color.FromRgb(110, 153, 201));
+                SetColor(resources, "Color.Text.Primary", System.Windows.Media.Colors.White);
+                SetColor(resources, "Color.Text.Secondary", System.Windows.Media.Color.FromRgb(200, 220, 255));
+            }
+        }
+
+        private static void SetColor(ResourceDictionary resources, string key, System.Windows.Media.Color color)
+        {
+            if (resources.Contains(key))
+            {
+                resources[key] = color;
+            }
+        }
+
+        private static void SetSolidBrush(ResourceDictionary resources, string key, System.Windows.Media.Color color)
+        {
+            if (resources.Contains(key))
+            {
+                var brush = resources[key] as SolidColorBrush;
+                if (brush != null && !brush.IsFrozen)
+                {
+                    brush.Color = color;
+                }
+                else
+                {
+                    // If frozen or not found, replace it with a new unfrozen brush
+                    resources[key] = new SolidColorBrush(color);
+                }
+            }
+            else
+            {
+                resources.Add(key, new SolidColorBrush(color));
+            }
+        }
     }
 }
