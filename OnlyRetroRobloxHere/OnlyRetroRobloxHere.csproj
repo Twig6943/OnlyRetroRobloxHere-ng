@@ -16,6 +16,9 @@
 		<RootNamespace>OnlyRetroRobloxHere</RootNamespace>
 	</PropertyGroup>
 	<ItemGroup>
+		<None Remove="resources\bannerfall.png" />
+		<None Remove="resources\bannerspring.png" />
+		<None Remove="resources\bannersummer.png" />
 		<None Remove="resources\launcher\bannerlong.png" />
 		<None Remove="resources\ads\vertical\53.jpg" />
 		<None Remove="resources\ads\vertical\52.jpg" />
@@ -27,6 +30,9 @@
 		<None Remove="resources\ads\vertical\54.jpg" />
 		<None Remove="resources\ads\vertical\59.jpg" />
 		<None Remove="resources\ads\vertical\58.jpg" />
+		<None Remove="resources\launcher\bannerlongfall.png" />
+		<None Remove="resources\launcher\bannerlongspring.png" />
+		<None Remove="resources\launcher\bannerlongsummer.png" />
 		<None Remove="resources\launcher\progressindicator.gif" />
 		<None Remove="resources\ads\vertical\61.jpg" />
 		<None Remove="resources\ads\vertical\63.jpg" />
@@ -177,6 +183,9 @@
 		<None Remove="resources\membership\buildersclub.png" />
 		<Page Remove="OnlyRetroRobloxHere.Launcher.App.xaml" />
 		<ApplicationDefinition Include="OnlyRetroRobloxHere.Launcher.App.xaml" />
+		<Resource Include="resources\bannerfall.png" />
+		<Resource Include="resources\bannerspring.png" />
+		<Resource Include="resources\bannersummer.png" />
 		<Resource Include="resources\launcher\bannerlong.png" LogicalName="resources/launcher/bannerlong.png" />
 		<Resource Include="resources\ads\vertical\53.jpg" LogicalName="resources/ads/vertical/53.jpg" />
 		<Resource Include="resources\ads\vertical\52.jpg" LogicalName="resources/ads/vertical/52.jpg" />
@@ -188,6 +197,9 @@
 		<Resource Include="resources\ads\vertical\54.jpg" LogicalName="resources/ads/vertical/54.jpg" />
 		<Resource Include="resources\ads\vertical\59.jpg" LogicalName="resources/ads/vertical/59.jpg" />
 		<Resource Include="resources\ads\vertical\58.jpg" LogicalName="resources/ads/vertical/58.jpg" />
+		<Resource Include="resources\launcher\bannerlongfall.png" />
+		<Resource Include="resources\launcher\bannerlongspring.png" />
+		<Resource Include="resources\launcher\bannerlongsummer.png" />
 		<Resource Include="resources\launcher\progressindicator.gif" LogicalName="resources/launcher/progressindicator.gif" />
 		<Resource Include="resources\ads\vertical\61.jpg" LogicalName="resources/ads/vertical/61.jpg" />
 		<Resource Include="resources\ads\vertical\63.jpg" LogicalName="resources/ads/vertical/63.jpg" />
