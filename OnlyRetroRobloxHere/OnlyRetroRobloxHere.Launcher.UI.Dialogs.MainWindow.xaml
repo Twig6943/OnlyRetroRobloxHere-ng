@@ -70,7 +70,7 @@
           </Border>
         </StackPanel>
         <StackPanel Margin="5" VerticalAlignment="Bottom">
-          <TextBlock Style="{StaticResource TextBlockWhite}" Text="{Binding Path=DebugText, Mode=OneTime}" Visibility="{Binding Path=DebugTextVisibility, Mode=OneTime}" />
+          <TextBlock Style="{StaticResource TextBlockRed}" Text="{Binding Path=DebugText, Mode=OneTime}" Visibility="{Binding Path=DebugTextVisibility, Mode=OneTime}" />
           <TextBlock Style="{StaticResource TextBlockWhite}" Text="{Binding Path=Version, Mode=OneTime}" />
         </StackPanel>
       </Grid>

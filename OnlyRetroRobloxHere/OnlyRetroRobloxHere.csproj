@@ -79,6 +79,7 @@
 		<None Remove="resources\ads\vertical\29.jpg" />
 		<None Remove="resources\ads\vertical\28.jpg" />
 		<None Remove="resources\launcher\playnowbutton.png" />
+		<None Remove="resources\launcher\theteam\remilia.png" />
 		<None Remove="resources\snowfall\snowflake5.png" />
 		<None Remove="resources\snowfall\snowflake4.png" />
 		<None Remove="resources\snowfall\snowflake3.png" />
@@ -239,6 +240,7 @@
 		<Resource Include="resources\ads\vertical\29.jpg" LogicalName="resources/ads/vertical/29.jpg" />
 		<Resource Include="resources\ads\vertical\28.jpg" LogicalName="resources/ads/vertical/28.jpg" />
 		<Resource Include="resources\launcher\playnowbutton.png" LogicalName="resources/launcher/playnowbutton.png" />
+		<Resource Include="resources\launcher\theteam\remilia.png" />
 		<Resource Include="resources\snowfall\snowflake5.png" LogicalName="resources/snowfall/snowflake5.png" />
 		<Resource Include="resources\snowfall\snowflake4.png" LogicalName="resources/snowfall/snowflake4.png" />
 		<Resource Include="resources\snowfall\snowflake3.png" LogicalName="resources/snowfall/snowflake3.png" />
@@ -354,10 +356,7 @@
 			</CustomAssemblyAttributes>
 		</ItemGroup>
 
-		<WriteCodeFragment AssemblyAttributes="@(CustomAssemblyAttributes)"
-						   Language="C#"
-						   OutputDirectory="$(IntermediateOutputPath)"
-						   OutputFile="BuildMetadata.g.cs">
+		<WriteCodeFragment AssemblyAttributes="@(CustomAssemblyAttributes)" Language="C#" OutputDirectory="$(IntermediateOutputPath)" OutputFile="BuildMetadata.g.cs">
 			<Output TaskParameter="OutputFile" ItemName="Compile" />
 		</WriteCodeFragment>
 	</Target>

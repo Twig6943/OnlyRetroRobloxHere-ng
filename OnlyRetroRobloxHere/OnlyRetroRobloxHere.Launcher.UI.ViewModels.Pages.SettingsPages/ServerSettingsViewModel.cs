@@ -52,19 +52,10 @@ internal class ServerSettingsViewModel : ViewModelBase
 		}
 	}
 
-	public Visibility AutoSaveDebugVisibility
-	{
-		get
-		{
-			if (!Settings.Default.Launch.AutoSaveDebug)
-			{
-				return Visibility.Collapsed;
-			}
-			return Visibility.Visible;
-		}
-	}
+    public static Visibility AutoSaveDebugVisibility =>
+    Utils.IsDebug ? Visibility.Visible : Visibility.Collapsed;
 
-	public uint AutoSaveChangesPerPlayer
+    public uint AutoSaveChangesPerPlayer
 	{
 		get
 		{

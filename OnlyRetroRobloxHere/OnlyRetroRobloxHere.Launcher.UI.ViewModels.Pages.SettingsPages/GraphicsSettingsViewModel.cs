@@ -153,17 +153,9 @@ internal class GraphicsSettingsViewModel : ViewModelBase
 		}
 	}
 
-	public Visibility DebugShowWebServerWindowVisibility
-	{
-		get
-		{
-			if (!Settings.Default.Launch.DebugShowWebServerWindow)
-			{
-				return Visibility.Collapsed;
-			}
-			return Visibility.Visible;
-		}
-	}
+    public static Visibility DebugShowWebServerWindowVisibility =>
+    Utils.IsDebug ? Visibility.Visible : Visibility.Collapsed;
 
-	public Visibility FPSVisibility => Visibility.Collapsed;
+    public static Visibility FPSVisibility =>
+	Utils.IsDebug ? Visibility.Visible : Visibility.Collapsed;
 }

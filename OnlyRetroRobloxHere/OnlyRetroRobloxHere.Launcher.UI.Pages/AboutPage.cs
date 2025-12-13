@@ -16,7 +16,7 @@ public partial class AboutPage : BasePage, IComponentConnector
 		InitializeComponent();
 		_viewModel = new AboutViewModel();
 		_viewModel.PrivateVersionWarningVisibility = ((!Utils.Version.Contains("_PB")) ? Visibility.Collapsed : Visibility.Visible);
-		base.DataContext = _viewModel;
+        base.DataContext = _viewModel;
 	}
 
 	private void OnMattHeadClicked(object sender, RoutedEventArgs e)

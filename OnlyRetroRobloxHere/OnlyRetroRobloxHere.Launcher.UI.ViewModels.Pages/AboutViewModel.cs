@@ -18,7 +18,10 @@ internal class AboutViewModel : ViewModelBase
 
 	public Visibility PrivateVersionWarningVisibility { get; set; }
 
-	public int MattHeadSize
+    public static Visibility DebugVersionWarningVisibility =>
+	Utils.IsDebug ? Visibility.Visible : Visibility.Collapsed;
+
+    public int MattHeadSize
 	{
 		get
 		{
