@@ -5,6 +5,8 @@ This repository contains the source code for Only Retro Roblox Here, this projec
 
 This project is missing some small, unimportant things to be a full revival of the launcher. Namely, the TTSHelper binary, as well as the ClientHelper. The ClientHelper binary may come some time in the future, but the TTSHelper binary might not. The reason is these binaries are written in another language that is difficult to decompile, though it assumes it won't be impossible, the effort is better spent on the launcher which is the biggest point. The clients are pretty good all things considered.
 
+The offical asset repository can be found here: https://github.com/hereelabs/ORRH-UGC-Repository/. This is where Only Retro Roblox Here pulls new official and community submitted assets (which were not in 1.2.0.1), you can see about submitting catalog items or maps there as well!
+
 ## Changelog
 ### ORRH 1.2.1.0 "A return"
 ```
