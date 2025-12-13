@@ -1,11 +1,12 @@
+using OnlyRetroRobloxHere.Common;
+using OnlyRetroRobloxHere.Launcher.Enums;
+using OnlyRetroRobloxHere.Launcher.Extensions;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows;
-using OnlyRetroRobloxHere.Common;
-using OnlyRetroRobloxHere.Launcher.Enums;
-using OnlyRetroRobloxHere.Launcher.Extensions;
 
 namespace OnlyRetroRobloxHere.Launcher;
 
@@ -26,7 +27,8 @@ public partial class App : Application
 			Shutdown();
 			return;
 		}
-		if (!PathHelper.Base.All(char.IsAscii))
+        Task.Run(() => AssetUpdater.UpdateAssetsAsync(PathHelper.Base)).GetAwaiter().GetResult();
+        if (!PathHelper.Base.All(char.IsAscii))
 		{
 			Logger.Instance.Warn("ORRH launch path has non-ASCII characters.");
 			Utils.ShowMessageBox("Your path has non-ASCII characters. This WILL cause problems with Roblox. Please move your ORRH location.", MessageBoxButton.OK, MessageBoxImage.Exclamation);
