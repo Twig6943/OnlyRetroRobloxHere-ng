@@ -121,7 +121,7 @@ public partial class CatalogPage : BasePage, IComponentConnector, IStyleConnecto
             Sounds.SecretActivated.Play();
             _viewModel.SearchQuery = "";
         }
-        if (_viewModel.SearchQuery == "flowersandgrass")
+        if (_viewModel.SearchQuery == "grasslandsalltheway")
         {
 			Settings.Default.Launch.SecretEventOverride = true;
 			Settings.Default.Launch.SecretEvent = "spring";
