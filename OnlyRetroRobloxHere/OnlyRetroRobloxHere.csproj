@@ -17,6 +17,7 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<None Remove="resources\bannerfall.png" />
+		<None Remove="resources\bannerpride.png" />
 		<None Remove="resources\bannerspring.png" />
 		<None Remove="resources\bannersummer.png" />
 		<None Remove="resources\launcher\bannerlong.png" />
@@ -31,6 +32,7 @@
 		<None Remove="resources\ads\vertical\59.jpg" />
 		<None Remove="resources\ads\vertical\58.jpg" />
 		<None Remove="resources\launcher\bannerlongfall.png" />
+		<None Remove="resources\launcher\bannerlongpride.png" />
 		<None Remove="resources\launcher\bannerlongspring.png" />
 		<None Remove="resources\launcher\bannerlongsummer.png" />
 		<None Remove="resources\launcher\progressindicator.gif" />
@@ -184,6 +186,7 @@
 		<Page Remove="OnlyRetroRobloxHere.Launcher.App.xaml" />
 		<ApplicationDefinition Include="OnlyRetroRobloxHere.Launcher.App.xaml" />
 		<Resource Include="resources\bannerfall.png" />
+		<Resource Include="resources\bannerpride.png" />
 		<Resource Include="resources\bannerspring.png" />
 		<Resource Include="resources\bannersummer.png" />
 		<Resource Include="resources\launcher\bannerlong.png" LogicalName="resources/launcher/bannerlong.png" />
@@ -198,6 +201,7 @@
 		<Resource Include="resources\ads\vertical\59.jpg" LogicalName="resources/ads/vertical/59.jpg" />
 		<Resource Include="resources\ads\vertical\58.jpg" LogicalName="resources/ads/vertical/58.jpg" />
 		<Resource Include="resources\launcher\bannerlongfall.png" />
+		<Resource Include="resources\launcher\bannerlongpride.png" />
 		<Resource Include="resources\launcher\bannerlongspring.png" />
 		<Resource Include="resources\launcher\bannerlongsummer.png" />
 		<Resource Include="resources\launcher\progressindicator.gif" LogicalName="resources/launcher/progressindicator.gif" />

@@ -13,5 +13,5 @@ internal class MainWindowViewModel : ViewModelBase
 
     public static string DebugText => "DEBUG";
 
-	public BitmapImage BannerSource => new BitmapImage(new Uri("pack://application:,,,/OnlyRetroRobloxHere;component/Resources/Banner" + (DateEvents.Winter ? "Winter" : "") + ".png"));
+	public BitmapImage BannerSource => new BitmapImage(new Uri("pack://application:,,,/OnlyRetroRobloxHere;component/Resources/Banner" + (DateEvents.Fall ? "Fall" : "") + (DateEvents.Spring ? "Spring" : "") + (DateEvents.Summer ? "Summer" : "") + (DateEvents.Pride ? "Pride" : "") + (DateEvents.Winter ? "Winter" : "") + ".png"));
 }

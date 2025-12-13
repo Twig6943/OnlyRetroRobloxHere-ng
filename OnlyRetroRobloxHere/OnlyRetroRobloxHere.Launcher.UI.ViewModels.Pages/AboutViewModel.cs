@@ -33,7 +33,7 @@ internal class AboutViewModel : ViewModelBase
 		}
 	}
 
-	public BitmapImage BannerSource => new BitmapImage(new Uri("pack://application:,,,/OnlyRetroRobloxHere;component/Resources/Launcher/BannerLong" + (DateEvents.Winter ? "Winter" : "") + ".png"));
+	public BitmapImage BannerSource => new BitmapImage(new Uri("pack://application:,,,/OnlyRetroRobloxHere;component/Resources/Launcher/BannerLong" + (DateEvents.Fall ? "Fall" : "") + (DateEvents.Spring ? "Spring" : "") + (DateEvents.Summer ? "Summer" : "") + (DateEvents.Pride ? "Pride" : "") + (DateEvents.Winter ? "Winter" : "") + ".png"));
 
 	public Visibility SnowfallVisibility
 	{
