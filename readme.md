@@ -7,18 +7,6 @@ This project is missing some small, unimportant things to be a full revival of t
 
 The offical asset repository can be found here: https://github.com/hereelabs/ORRH-UGC-Repository/. This is where Only Retro Roblox Here pulls new official and community submitted assets (which were not in 1.2.0.1), you can see about submitting catalog items or maps there as well!
 
-## Changelog
-### ORRH 1.3.0.0
-```
-- Now open source flavored!
-- AssetDelivery fixed
-- No more missing hats even if you dont put your cookie in the launcher; all the assets are bundled now
-- New items and maps thanks to a built-in asset updater, community submitted
-- 3 new seasonal themes + Updated winter theme
-- Many minor bugs fixed
-- Some internal stuff that will make development easier
-```
-
 ## Installing
 If you've never downloaded ORRH before, you can download the "ORRH-ng-Full.zip" package, containing the latest version of ORRH with all the data. If you have an existing ORRH but have never installed ORRH-ng, you need to download the "ORRH-ng-Full.zip" package which contains the "ORRH Base Assets" pack. If you have an existing installation of ORRH post-ng, you can download "ORRH-ng-update.zip" and extract it over the directory where your old ORRH files are.
 
