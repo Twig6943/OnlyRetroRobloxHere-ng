@@ -18,7 +18,7 @@ jobs:
       - name: Install .NET SDK via Homebrew
         run: |
           brew update
-          brew install --cask dotnet-sdk@8
+          brew install --cask dotnet-sdk@6
           sudo ln -sfn /usr/local/share/dotnet/dotnet /usr/local/bin/dotnet
           dotnet --info
 
