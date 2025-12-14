@@ -18,7 +18,7 @@ Credit to Matt, the original creator of ORRH! It hopes he understands this proje
 
 The current main developer is the owner of this repository, [ @soundseraph](https://github.com/soundseraph).
 
-Some of the patches in this project were based upon patches made by other people, such as Heree for his patch enabling UGC hats.
+Some of the patches in this project were based upon patches made by other people, such as tommy for their patch enabling UGC hats.
 
 ## Footnotes
 ### On New Clients
