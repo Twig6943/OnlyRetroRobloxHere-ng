@@ -31,7 +31,7 @@ public partial class AboutPage : BasePage, IComponentConnector
 
 	private void OnDiscordIconClicked(object sender, RoutedEventArgs e)
 	{
-		Utils.OpenUrl("https://discord.gg/A3CZAdRzwd");
+		Utils.OpenUrl("https://discord.gg/TtnfRuFu7P");
 	}
 
 	public override void OnPageOpening()
