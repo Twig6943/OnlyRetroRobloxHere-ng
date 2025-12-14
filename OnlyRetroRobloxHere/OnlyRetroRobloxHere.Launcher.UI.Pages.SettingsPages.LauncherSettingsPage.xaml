@@ -34,14 +34,19 @@
                 <PasswordBox Name="RobloxCookieBox" />
             </StackPanel>
         </GroupBox>
-        <GroupBox Padding="2" Foreground="#AFCDE0" Header="Hacks" UseLayoutRounding="True">
+        <GroupBox Padding="2" Foreground="#AFCDE0" Header="Updater" UseLayoutRounding="True">
             <StackPanel>
                 <StackPanel Margin="0,0,0,2" Orientation="Horizontal">
-                    <TextBlock Margin="0,0,0,2" Style="{StaticResource TextBlockGrey}" Text="Any temporary/hacky features which break stuff go here." />
+                    <TextBlock Margin="0,0,0,2" Style="{StaticResource TextBlockGrey}" Text="Disable only when needed. With this off, you can become out of date quickly." />
                 </StackPanel>
                 <StackPanel Margin="0,0,0,2" Orientation="Horizontal">
-                    <CheckBox Margin="0,0,5,0" Content="UGC/Custom Hats Hack" FlowDirection="RightToLeft" IsChecked="{Binding Path=HackCustomHats, Mode=TwoWay}" />
-                    <Image Height="14" RenderOptions.BitmapScalingMode="HighQuality" Source="pack://application:,,,/OnlyRetroRobloxHere;component/Resources/Launcher/Warning.png" ToolTip="Ensure you have installed a pack containing at least the assets of all the vanilla hats, as this will disable ORRH's ability to load version-appropriate Hats directy from ROBLOX. If you enable this without it, all your hats will dissapear in game." />
+                    <CheckBox Margin="0,0,5,0" Content="Enable Asset Update" IsChecked="{Binding Path=DoUpdateAssets, Mode=TwoWay}" />
+                </StackPanel>
+                <StackPanel Margin="0,0,0,2" Orientation="Horizontal">
+                    <TextBlock Margin="0,0,0,2" Style="{StaticResource TextBlockGreen}" Text="You are Up-to-date!" Visibility="{Binding Path=UpToDate, Mode=OneWay}" />
+                </StackPanel>
+                <StackPanel Margin="0,0,0,2" Orientation="Horizontal">
+                    <TextBlock Margin="0,0,0,2" Style="{StaticResource TextBlockRed}" Visibility="{Binding Path=OutOfDate, Mode=OneWay}" Text="{Binding Path=UpdateNotice, Mode=OneWay}" />
                 </StackPanel>
             </StackPanel>
         </GroupBox>

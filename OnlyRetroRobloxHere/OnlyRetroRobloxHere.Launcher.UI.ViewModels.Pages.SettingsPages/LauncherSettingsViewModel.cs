@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net.NetworkInformation;
 using System.Windows;
 using OnlyRetroRobloxHere.Common;
 using OnlyRetroRobloxHere.Launcher.Enums;
@@ -64,19 +65,27 @@ internal class LauncherSettingsViewModel : ViewModelBase
 			}
 		}
 	}
-    public bool HackCustomHats
+    public bool DoUpdateAssets
     {
         get
         {
-            return Settings.Default.Launch.HackCustomHats;
+            return Settings.Default.Launch.DoUpdateAssets;
         }
         set
         {
-            if (Settings.Default.Launch.HackCustomHats != value)
+            if (Settings.Default.Launch.DoUpdateAssets != value)
             {
-                Settings.Default.Launch.HackCustomHats = value;
-                OnPropertyChanged("HackCustomHats");
+                Settings.Default.Launch.DoUpdateAssets = value;
+                OnPropertyChanged("DoUpdateAssets");
             }
         }
     }
+
+    public static Visibility UpToDate =>
+	!Settings.Default.Launch.OudatedAssets ? Visibility.Visible : Visibility.Collapsed;
+
+    public static Visibility OutOfDate =>
+	Settings.Default.Launch.OudatedAssets ? Visibility.Visible : Visibility.Collapsed;
+
+    public string UpdateNotice { get; } = ("Update available: " + Settings.Default.Launch.LatestHash + "");
 }

@@ -35,11 +35,16 @@ internal class Settings
 
 		public bool EggHuntMode { get; set; }
 
-        public bool HackCustomHats { get; set; }
+		public bool HackCustomHats { get; set; } = true;
 
         public string? SecretEvent { get; set; }
 
-		public bool SecretEventOverride { get; set; } = false;
+        public string? LatestHash { get; set; }
+		public bool OudatedAssets { get; set; } = false;
+
+        public bool SecretEventOverride { get; set; } = false;
+
+		public bool DoUpdateAssets { get; set; } = true;
 
         public bool AutoSaveDebug { get; set; }
 

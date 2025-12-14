@@ -31,6 +31,40 @@ public class AssetUpdater
     /// <returns>Nothing, will exit once completed or failed</returns>
     public async static Task UpdateAssetsAsync(string launcherBaseDirectory)
     {
+        if (Settings.Default.Launch.DoUpdateAssets == false)
+        {
+            Logger.Instance.Info("asset updating is disabled in settings...checking asset freshness");
+            using (var client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("ORRH-Launcher", "1.0"));
+
+                try
+                {
+                    string latestHash = await GetLatestCommitHashAsync(client);
+                    string localHashPath = Path.Combine(launcherBaseDirectory, VersionFileName);
+                    string currentHash = File.Exists(localHashPath) ? File.ReadAllText(localHashPath).Trim() : "";
+                    string shortHash = latestHash.Substring(0, 7);
+
+                    if (string.Equals(latestHash, currentHash, StringComparison.OrdinalIgnoreCase))
+                    {
+                        Logger.Instance.Info($"assets are up to date. ({shortHash}).");
+                        Settings.Default.Launch.OudatedAssets = false;
+                        return;
+                    }
+
+                    Logger.Instance.Info($"newer assets detected! ({shortHash}).");
+                    Settings.Default.Launch.OudatedAssets = true;
+                    Settings.Default.Launch.LatestHash = shortHash;
+                    return;
+                }
+                catch (Exception ex)
+                {
+                    Logger.Instance.Info($"failed to check asset freshness: {ex.Message}");
+                    return;
+                }
+            }
+
+        }
         Logger.Instance.Info("checking for new asset data...");
 
         using (var client = new HttpClient())
@@ -47,6 +81,7 @@ public class AssetUpdater
                 if (string.Equals(latestHash, currentHash, StringComparison.OrdinalIgnoreCase))
                 {
                     Logger.Instance.Info($"assets are up to date. ({shortHash}).");
+                    Settings.Default.Launch.OudatedAssets = false;
                     return;
                 }
 
@@ -64,6 +99,7 @@ public class AssetUpdater
                 File.WriteAllText(localHashPath, latestHash);
                 Logger.Instance.Info($"assets updated successfully to version {shortHash}.");
                 string message = $"Your assets have been updated successfully to version {shortHash}!";
+                Settings.Default.Launch.OudatedAssets = false;
                 Utils.ShowMessageBox(message, System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Information);
             }
             catch (Exception ex)
