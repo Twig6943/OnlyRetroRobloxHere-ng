@@ -20,7 +20,7 @@ The offical asset repository can be found here: https://github.com/hereelabs/ORR
 ```
 
 ## Installing
-If you've never downloaded ORRH before, you can download the "ORRH-ng-Full.zip" package, containing the latest version of ORRH with all the data. If you have an existing installation of ORRH, whether pre-ng or not, you can download "ORRH-ng-update.zip" and extract it over the directory where your old ORRH files are. 
+If you've never downloaded ORRH before, you can download the "ORRH-ng-Full.zip" package, containing the latest version of ORRH with all the data. If you have an existing ORRH but have never installed ORRH-ng, you need to download the "ORRH-ng-Full.zip" package which contains the "ORRH Base Assets" pack. If you have an existing installation of ORRH post-ng, you can download "ORRH-ng-update.zip" and extract it over the directory where your old ORRH files are.
 
 ## Building
 Thanks to dotnet this project does not require any particular special setup, you should be able to clone the repository with git and open it in Visual Studio 2022, as long as you have the dotnet 6.0 SDK installed and ASP.NET SDK you will be able to simply just build, the dependencies should be pulled automatically by nuget. The launcher project is OnlyRetroRobloxHere when you build this all the files will be placed in the bin folder.
