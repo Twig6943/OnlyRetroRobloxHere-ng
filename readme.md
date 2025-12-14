@@ -23,3 +23,5 @@ Some of the patches in this project were based upon patches made by other people
 ## Footnotes
 ### On New Clients
 This one doesnt have enough knowledge to properly patch clients, reverse engineering the ORRH patching DLL will take lots of effort as well when that effort is better spent on the launcher as of now. If you want to contribute a new client, it has to be between the years of 2014-2018, and must be nearly feature-complete or on-par with the ORRH currently existing clients, and be patched in a way consistent with existing ORRH clients. The period of real "classic roblox" where it was a Simulation Game and not a Game Engine largely ended during 2014, so for what it is concerned with, ORRH has enough clients to fulfil any Old Roblox needs.
+
+You can join a discord server for this project [here](https://discord.gg/TtnfRuFu7P).
