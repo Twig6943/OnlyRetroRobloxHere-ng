@@ -28,7 +28,7 @@ jobs:
         with:
           name: Release
           path: |
-            OnlyRetroRobloxHere/bin/Release/net6.0-windows/win-x86
-            OnlyRetroRobloxHere.Common/bin/Release/net6.0-windows/win-x86
-            OnlyRetroRobloxHere.ServerAuthInterface/bin/Release/net6.0-windows/win-x86
-            OnlyRetroRobloxHere.WebServer/bin/Release/net6.0-windows/win-x86
+            OnlyRetroRobloxHere/bin/Release/netcoreapp6.0-windows
+            OnlyRetroRobloxHere.Common/bin/Release/netcoreapp6.0
+            OnlyRetroRobloxHere.ServerAuthInterface/bin/Release/netcoreapp6.0
+            OnlyRetroRobloxHere.WebServer/bin/Release/netcoreapp6.0
