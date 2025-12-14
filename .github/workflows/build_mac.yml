@@ -15,7 +15,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Install .NET 8 SDK via Homebrew
+      - name: Install .NET SDK via Homebrew
         run: |
           brew update
           brew install --cask dotnet-sdk@8
