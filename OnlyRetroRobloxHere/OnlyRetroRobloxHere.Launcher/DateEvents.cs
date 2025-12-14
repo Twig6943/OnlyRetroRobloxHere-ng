@@ -27,7 +27,8 @@ internal static class DateEvents
 
     public static bool Winter => CheckEvent("winter", DateTime.Now.Month == 12);
     public static bool Summer => CheckEvent("summer", DateTime.Now.Month == 7);
-    public static bool Pride => CheckEvent("pride", DateTime.Now.Month == 6);
+    // This theme isnt done at all yet
+    public static bool Pride => CheckEvent("pride", DateTime.Now.Month == 0);
     public static bool Spring => CheckEvent("spring", DateTime.Now.Month == 4);
     public static bool Fall => CheckEvent("fall", DateTime.Now.Month == 9);
 
