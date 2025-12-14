@@ -1,0 +1,41 @@
+name: Build on macOS
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build on macOS (${{ matrix.arch }})
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        arch: [x64, arm64]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install .NET 8 SDK via Homebrew
+        run: |
+          brew update
+          brew install --cask dotnet-sdk@8
+          sudo ln -sfn /usr/local/share/dotnet/dotnet /usr/local/bin/dotnet
+          dotnet --info
+
+      - name: Restore dependencies
+        run: dotnet restore
+        working-directory: OnlyRetroRobloxHere.WebServer
+
+      - name: Build project
+        run: dotnet build --configuration Release --no-restore
+        working-directory: OnlyRetroRobloxHere.WebServer
+
+      - name: Publish for macOS ${{ matrix.arch }}
+        run: dotnet publish --configuration Release --runtime osx-${{ matrix.arch }} --self-contained true -o ../publish-${{ matrix.arch }}
+        working-directory: OnlyRetroRobloxHere.WebServer
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: macos-${{ matrix.arch }}-build
+          path: publish-${{ matrix.arch }}

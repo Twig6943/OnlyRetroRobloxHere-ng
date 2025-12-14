@@ -1,0 +1,34 @@
+name: Build on Windows
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build on Windows
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install .NET SDK via Chocolatey
+        shell: pwsh
+        run: |
+          choco install dotnet-6.0-sdk -y
+
+      - name: Restore NuGet Packages
+        run: dotnet restore OnlyRetroRobloxHere.sln
+
+      - name: Build All Projects
+        run: dotnet build OnlyRetroRobloxHere.sln -c Release
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: Release
+          path: |
+            OnlyRetroRobloxHere/bin/Release/net6.0-windows/win-x86
+            OnlyRetroRobloxHere.Common/bin/Release/net6.0-windows/win-x86
+            OnlyRetroRobloxHere.ServerAuthInterface/bin/Release/net6.0-windows/win-x86
+            OnlyRetroRobloxHere.WebServer/bin/Release/net6.0-windows/win-x86
